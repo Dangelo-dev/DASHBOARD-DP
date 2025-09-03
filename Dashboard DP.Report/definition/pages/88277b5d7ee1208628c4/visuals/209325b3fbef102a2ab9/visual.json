@@ -1,16 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "a10395ebc8bb5da9c53d",
+  "name": "209325b3fbef102a2ab9",
   "position": {
-    "x": 1071.5014164305951,
-    "y": 143.22946175637395,
-    "z": 3000,
-    "height": 63.456090651558078,
-    "width": 480.4532577903683,
-    "tabOrder": 2000
+    "x": 167.43276283618582,
+    "y": 289.4865525672372,
+    "z": 9000,
+    "height": 740.14669926650367,
+    "width": 380.24449877750612,
+    "tabOrder": 8000
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
         "Values": {
@@ -23,38 +23,59 @@
                       "Entity": "dim_Lojas"
                     }
                   },
-                  "Property": "CENTRO DE CUSTO"
+                  "Property": "COD LOJA"
                 }
               },
-              "queryRef": "dim_Lojas.CENTRO DE CUSTO",
-              "nativeQueryRef": "CENTRO DE CUSTO1",
-              "active": true
+              "queryRef": "dim_Lojas.COD LOJA",
+              "nativeQueryRef": "COD LOJA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "COLABORADORES"
+                }
+              },
+              "queryRef": "fact_Colaboradores.COLABORADORES",
+              "nativeQueryRef": "COLABORADORES"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "isDefaultSort": true
       }
     },
     "objects": {
-      "data": [
+      "columnWidth": [
         {
           "properties": {
-            "mode": {
+            "value": {
               "expr": {
                 "Literal": {
-                  "Value": "'Dropdown'"
+                  "Value": "79.18181594388675D"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "dim_Lojas.COD LOJA"
           }
         }
-      ],
-      "items": [
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
-            "bold": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "'Colaboradores por Loja'"
                 }
               }
             },
@@ -70,43 +91,37 @@
                 }
               }
             },
-            "textSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
-            }
-          }
-        }
-      ],
-      "header": [
-        {
-          "properties": {
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
           }
         }
       ],
-      "general": [
-        {
-          "properties": {}
-        }
-      ]
-    },
-    "visualContainerObjects": {
       "background": [
         {
           "properties": {
@@ -122,5 +137,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

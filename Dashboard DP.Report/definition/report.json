@@ -24,6 +24,19 @@
           }
         }
       }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
     ]
   },
   "resourcePackages": [
@@ -48,8 +61,8 @@
           "type": "Image"
         },
         {
-          "name": "02._Quadro_de_Funcionarios9775851152351724.png",
-          "path": "02._Quadro_de_Funcionarios9775851152351724.png",
+          "name": "02._Rel._de_Colaboradores6039296256532877.png",
+          "path": "02._Rel._de_Colaboradores6039296256532877.png",
           "type": "Image"
         }
       ]

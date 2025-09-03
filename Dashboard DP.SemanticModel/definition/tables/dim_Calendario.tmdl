@@ -1,7 +1,9 @@
 table dim_Calendario
 	lineageTag: e44cc038-472a-45fc-851b-fd8949d1a19e
+	dataCategory: Time
 
 	column Date
+		isKey
 		formatString: Short Date
 		lineageTag: e61b80df-2ade-40e5-a39b-61ee3403162f
 		summarizeBy: none

@@ -1,0 +1,67 @@
+table dim_Lojas
+	lineageTag: da5ef227-d668-4715-9ef5-b23eb61b5f03
+
+	column 'CENTRO DE CUSTO'
+		dataType: string
+		lineageTag: 3fed1173-83f2-499a-8e6c-da1b7c2796b4
+		summarizeBy: none
+		sourceColumn: CENTRO DE CUSTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'COD LOJA'
+		dataType: string
+		lineageTag: 0d06bea8-2a0f-43af-a640-32f828336540
+		summarizeBy: none
+		sourceColumn: COD LOJA
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'NOME LOJA'
+		dataType: string
+		lineageTag: 2a8763d2-d4c0-4f1e-98b0-0497e4d2ff6e
+		summarizeBy: none
+		sourceColumn: NOME LOJA
+
+		annotation SummarizationSetBy = Automatic
+
+	column TIPO
+		dataType: string
+		lineageTag: a70fd676-273a-4544-b4e1-f7accaebf501
+		summarizeBy: none
+		sourceColumn: TIPO
+
+		annotation SummarizationSetBy = Automatic
+
+	column UNIDADE
+		dataType: string
+		lineageTag: f7427181-2387-4107-9d07-2d69a587c34a
+		summarizeBy: none
+		sourceColumn: UNIDADE
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Lojas = m
+		mode: import
+		source = ```
+				let
+				    Source = Excel.Workbook( File.Contents( "T:\12-TI\DASHBOARD\DASHBOARD DP\dim_Lojas.xlsx"), true, true ){[Item="Planilha1"]}[Data],
+				    
+				    DefinirTipagem = Table.TransformColumnTypes(
+				        Source,
+				        {
+				            {"CENTRO DE CUSTO", type text}, 
+				            {"COD LOJA", type text}, 
+				            {"NOME LOJA", type text}, 
+				            {"TIPO", type text}, 
+				            {"UNIDADE", type text}
+				        }
+				    )
+				in
+				    DefinirTipagem
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

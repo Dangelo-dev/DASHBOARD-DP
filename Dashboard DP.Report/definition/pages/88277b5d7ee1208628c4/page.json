@@ -27,7 +27,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'02. Quadro de Funcionarios.png'"
+                    "Value": "'02. Rel. de Colaboradores.png'"
                   }
                 }
               },
@@ -36,7 +36,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "02._Quadro_de_Funcionarios9775851152351724.png"
+                    "ItemName": "02._Rel._de_Colaboradores6039296256532877.png"
                   }
                 }
               },
@@ -60,5 +60,27 @@
       }
     ]
   },
-  "visibility": "HiddenInViewMode"
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "f0dba49d9e85c4c7b3ea",
+      "target": "42dabfede36d25f3f538",
+      "type": "DataFilter"
+    },
+    {
+      "source": "f0dba49d9e85c4c7b3ea",
+      "target": "dcfb8ef8bbcad074f6da",
+      "type": "DataFilter"
+    },
+    {
+      "source": "42dabfede36d25f3f538",
+      "target": "f0dba49d9e85c4c7b3ea",
+      "type": "DataFilter"
+    },
+    {
+      "source": "42dabfede36d25f3f538",
+      "target": "dcfb8ef8bbcad074f6da",
+      "type": "DataFilter"
+    }
+  ]
 }

@@ -1,0 +1,20 @@
+table dim_Visao
+	lineageTag: bf0867da-092c-4a54-a344-fda723d66b4c
+
+	column Value
+		lineageTag: 27737712-f5fb-46de-ac18-2b7d38034947
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Visao = calculated
+		mode: import
+		source = ```
+				
+				{ "Quantidade", "Colaborador" } 
+				```
+
+	annotation PBI_Id = 845e21bf79e848d09a7e587bece03b2c
+

@@ -1,38 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "42dabfede36d25f3f538",
+  "name": "e9cead9742d8f3f25352",
   "position": {
-    "x": 167.42084275862908,
-    "y": 289.4865525672372,
-    "z": 8500,
-    "height": 740.14669926650367,
-    "width": 380.24449877750612,
-    "tabOrder": 4000
+    "x": 569.58435207823959,
+    "y": 610.26894865525674,
+    "z": 11001,
+    "height": 411.54034229828852,
+    "width": 635.30562347188265,
+    "tabOrder": 10001
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "treemap",
     "query": {
       "queryState": {
-        "Category": {
+        "Group": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "dim_Lojas"
+                      "Entity": "fact_Colaboradores"
                     }
                   },
-                  "Property": "COD LOJA"
+                  "Property": "TIME"
                 }
               },
-              "queryRef": "dim_Lojas.COD LOJA",
-              "nativeQueryRef": "COD LOJA",
+              "queryRef": "fact_Colaboradores.TIME",
+              "nativeQueryRef": "TIME",
               "active": true
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -71,21 +71,22 @@
       }
     },
     "objects": {
-      "categoryAxis": [
+      "legend": [
         {
           "properties": {
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
-            },
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
             "fontFamily": {
               "expr": {
                 "Literal": {
@@ -96,7 +97,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -104,33 +105,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
@@ -144,18 +118,6 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
                 }
               }
             },
@@ -191,19 +153,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Qtd Colaboradores por Loja'"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "'Qtd Funcionarios por Time'"
                 }
               }
             },
@@ -221,10 +171,29 @@
                 }
               }
             },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
                   "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
                 }
               }
             }

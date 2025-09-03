@@ -1,0 +1,53 @@
+expression PastaLocal = "T:\12-TI\DASHBOARD\DASHBOARD DP" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a64e87e9-f351-4c34-b0a5-81ec3f95617b
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+
+expression fxColaboradores = ```
+		( arquivo as binary, MesAno as text ) as table =>
+		let
+		    Source = Excel.Workbook( arquivo, true ), // Carrega cada arquivo de forma individual
+		    AbaUDI = Source{6}[Data], // Responsavel por carregar as informações de UDI
+		    AbaBH = Source{4}[Data], // Responsavel por carregar as informações de BH
+		
+		    ColunasNecessarias = { "COLABORADORES", "DATA DE ADMISSÃO", "CARGO", "TIME", "DIRETORIA", "SETOR-DEPARTAMENTO ", "QUADRO", "UNIDADE", "CENTRO DE CUSTO"}, // Adicionar somente aqui caso haja mais colunas necessárias futuramente
+		
+		    // Tipagem centralizada dos dados
+		    DefinirTipagem =  {
+		            {"COLABORADORES", type text}, 
+		            {"DATA DE ADMISSÃO", type date}, 
+		            {"CARGO", type text}, 
+		            {"TIME", type text}, 
+		            {"DIRETORIA", type text}, 
+		            {"SETOR-DEPARTAMENTO ", type text}, 
+		            {"QUADRO", type text}, 
+		            {"UNIDADE", type text}, 
+		            {"CENTRO DE CUSTO", type text}
+		        },
+		
+		    // Função para tratar qualquer aba
+		    fxTratarTabela = 
+		        ( tabela as table, MesAno as text ) as table =>
+		        let
+		            SelecionarColunas = Table.SelectColumns( tabela, ColunasNecessarias ),
+		            TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
+		            AdicionarColuna = Table.AddColumn( TiparColuna, "MesAno", each Date.FromText( MesAno ), type date )
+		        in
+		            AdicionarColuna,
+		    
+		    TabelaTratadaUDI = fxTratarTabela( AbaUDI, MesAno ), // UDI com as etapas de definir tipagem e selecionar colunas
+		    TabelaTratadaBH = fxTratarTabela( AbaBH, MesAno ), // BH com as etapas de definir tipagem e selecionar colunas
+		    
+		    // União das duas unidades em uma única tabela
+		    UnirTabelasTratadas = Table.Combine( { TabelaTratadaUDI, TabelaTratadaBH } )
+		in
+		    UnirTabelasTratadas
+		```
+	lineageTag: 882c4b79-56a7-4d4a-b3f0-805bc844bfeb
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Function
+

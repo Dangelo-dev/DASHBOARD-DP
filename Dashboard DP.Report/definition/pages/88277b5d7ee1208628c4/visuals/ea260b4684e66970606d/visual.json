@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "ea260b4684e66970606d",
   "position": {
-    "x": 167.4312796208531,
-    "y": 143.77251184834125,
-    "z": 1,
-    "height": 63.69668246445498,
-    "width": 205.64928909952607,
-    "tabOrder": 1
+    "x": 166.7988668555241,
+    "y": 143.22946175637395,
+    "z": 1000,
+    "height": 63.456090651558078,
+    "width": 145.04249291784703
   },
   "visual": {
     "visualType": "slicer",
@@ -117,23 +116,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "54e031cebb7b8696a370",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_Colaboradores"
-              }
-            },
-            "Property": "UNIDADE"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

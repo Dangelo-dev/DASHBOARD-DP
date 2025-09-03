@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "85d64d915a1dad38c167",
+  "name": "89dfd0915ba0ba246ac0",
   "position": {
-    "x": 333.59773371104819,
+    "x": 552.97450424929184,
     "y": 143.22946175637395,
-    "z": 2000,
+    "z": 7000,
     "height": 63.456090651558078,
-    "width": 197.62039660056658,
-    "tabOrder": 1000
+    "width": 203.05949008498584,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -23,11 +23,11 @@
                       "Entity": "fact_Colaboradores"
                     }
                   },
-                  "Property": "DIRETORIA"
+                  "Property": "TIME"
                 }
               },
-              "queryRef": "Lista de Colaboradores UDI.DIRETORIA",
-              "nativeQueryRef": "DIRETORIA",
+              "queryRef": "fact_Colaboradores.TIME",
+              "nativeQueryRef": "TIME",
               "active": true
             }
           ]
@@ -181,6 +181,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {

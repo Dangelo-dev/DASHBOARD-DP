@@ -9,53 +9,16 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column SEXO
-		dataType: string
-		lineageTag: 04ea949c-c6b3-4c13-9b83-e565fb4f21a6
-		summarizeBy: none
-		sourceColumn: SEXO
-
-		annotation SummarizationSetBy = Automatic
-
-	column DEP
-		dataType: string
-		lineageTag: 86164754-aa74-4d75-97b6-74811f972f45
-		summarizeBy: none
-		sourceColumn: DEP
-
-		annotation SummarizationSetBy = Automatic
-
-	column A/E
-		dataType: string
-		lineageTag: fd8015b1-b221-4664-881a-d09c050039a3
-		summarizeBy: none
-		sourceColumn: A/E
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'DATA DE NASCIMENTO'
-		dataType: string
-		lineageTag: 6e20a833-7f1d-4ca2-b040-fdd255952dd8
-		summarizeBy: none
-		sourceColumn: DATA DE NASCIMENTO
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'DATA DE ADMISSÃO'
-		dataType: string
+		dataType: dateTime
+		formatString: Short Date
 		lineageTag: 51b08a14-758c-4e11-8874-0190c8f8d784
 		summarizeBy: none
 		sourceColumn: DATA DE ADMISSÃO
 
 		annotation SummarizationSetBy = Automatic
 
-	column CPF
-		dataType: string
-		lineageTag: 4e11a439-971d-4c4e-887f-a2bb84c589b5
-		summarizeBy: none
-		sourceColumn: CPF
-
-		annotation SummarizationSetBy = Automatic
+		annotation UnderlyingDateTimeDataType = Date
 
 	column CARGO
 		dataType: string
@@ -89,27 +52,11 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column CARGO_1
-		dataType: string
-		lineageTag: eb492780-f835-4543-853c-e9a3eea3c93a
-		summarizeBy: none
-		sourceColumn: CARGO_1
-
-		annotation SummarizationSetBy = Automatic
-
 	column UNIDADE
 		dataType: string
 		lineageTag: 9ae8e1cc-caeb-4b67-afe7-b3c41d761db6
 		summarizeBy: none
 		sourceColumn: UNIDADE
-
-		annotation SummarizationSetBy = Automatic
-
-	column REGISTRO
-		dataType: string
-		lineageTag: 0b0654e2-b344-4d19-a200-d9482e485104
-		summarizeBy: none
-		sourceColumn: REGISTRO
 
 		annotation SummarizationSetBy = Automatic
 
@@ -121,126 +68,6 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column Column16
-		dataType: string
-		lineageTag: 2f5ec2ce-8233-46dc-b424-2c54940b8339
-		summarizeBy: none
-		sourceColumn: Column16
-
-		annotation SummarizationSetBy = Automatic
-
-	column CNPJ
-		dataType: string
-		lineageTag: 3e9c9d13-470e-41fb-be1e-b6ca77e759c3
-		summarizeBy: none
-		sourceColumn: CNPJ
-
-		annotation SummarizationSetBy = Automatic
-
-	column GYMPASS
-		dataType: string
-		lineageTag: 7bdaa676-ea8e-4fe2-bcf9-ac5c7de10e09
-		summarizeBy: none
-		sourceColumn: GYMPASS
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'ULTIMO ASO'
-		dataType: string
-		lineageTag: abbdd8cf-f2d5-4fcf-be02-f3ec1ae4b50e
-		summarizeBy: none
-		sourceColumn: ULTIMO ASO
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'PROXIMO ASO'
-		dataType: string
-		lineageTag: aff2cee8-0491-47ec-a4c9-d5cd9517b5c1
-		summarizeBy: none
-		sourceColumn: PROXIMO ASO
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'EXPERIÊNCIA (44DIAS)'
-		dataType: string
-		lineageTag: 5165fd2b-bd7d-4fbc-925b-2f430c8f66fa
-		summarizeBy: none
-		sourceColumn: EXPERIÊNCIA (44DIAS)
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'EXPERIÊNCIA (46 DIAS)'
-		dataType: string
-		lineageTag: e0fc739b-3b4d-43a8-bc96-1c8d7e5bd197
-		summarizeBy: none
-		sourceColumn: EXPERIÊNCIA (46 DIAS)
-
-		annotation SummarizationSetBy = Automatic
-
-	column AGENCIA
-		dataType: string
-		lineageTag: 6c76c983-92a6-49e8-a4aa-bda362fa0bce
-		summarizeBy: none
-		sourceColumn: AGENCIA
-
-		annotation SummarizationSetBy = Automatic
-
-	column CONTA
-		dataType: string
-		lineageTag: e4f94030-8ecb-49e4-98fd-832d25c4de4a
-		summarizeBy: none
-		sourceColumn: CONTA
-
-		annotation SummarizationSetBy = Automatic
-
-	column VA
-		dataType: string
-		lineageTag: 6492f6f1-df62-4b00-9e18-76696e3fdae3
-		summarizeBy: none
-		sourceColumn: VA
-
-		annotation SummarizationSetBy = Automatic
-
-	column SALARIO
-		dataType: string
-		lineageTag: ddc9f8e4-332c-4f2b-a02e-f862006a8612
-		summarizeBy: none
-		sourceColumn: SALARIO
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'TELEFONE DE CONTATO'
-		dataType: string
-		lineageTag: c6f2cb60-854a-444f-a125-5bd0f233f0f3
-		summarizeBy: none
-		sourceColumn: TELEFONE DE CONTATO
-
-		annotation SummarizationSetBy = Automatic
-
-	column EMAIL
-		dataType: string
-		lineageTag: 9861b27e-5287-4ca7-a074-e488cf95ad5d
-		summarizeBy: none
-		sourceColumn: EMAIL
-
-		annotation SummarizationSetBy = Automatic
-
-	column PIS
-		dataType: string
-		lineageTag: 2f7a29f9-0b95-4643-a9cb-5b3be3c60d16
-		summarizeBy: none
-		sourceColumn: PIS
-
-		annotation SummarizationSetBy = Automatic
-
-	column 'VINCULO '
-		dataType: string
-		lineageTag: 1a79e3ce-1b3a-4f8a-bbba-5a61b068b49c
-		summarizeBy: none
-		sourceColumn: "VINCULO "
-
-		annotation SummarizationSetBy = Automatic
-
 	column QUADRO
 		dataType: string
 		lineageTag: e357f653-b258-4965-b980-6d2c0a6eae24
@@ -249,49 +76,43 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'QUANTIDADE '
-		dataType: string
-		lineageTag: f57f2dae-a424-4dea-9513-2bce330b3602
+	column MesAno
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: e648a2e6-2f10-4e31-9bbf-98da8274bbe6
 		summarizeBy: none
-		sourceColumn: "QUANTIDADE "
+		sourceColumn: MesAno
 
 		annotation SummarizationSetBy = Automatic
 
-	column Column33
-		dataType: string
-		lineageTag: 27658ff5-7576-42ec-9b2d-b6a25326032c
-		summarizeBy: none
-		sourceColumn: Column33
-
-		annotation SummarizationSetBy = Automatic
-
-	column Column34
-		dataType: string
-		lineageTag: 2808e9f5-b8fb-4869-b89a-0b2148505466
-		summarizeBy: none
-		sourceColumn: Column34
-
-		annotation SummarizationSetBy = Automatic
-
-	column Column35
-		dataType: string
-		lineageTag: 7517579e-5a62-413c-954b-986870a5693d
-		summarizeBy: none
-		sourceColumn: Column35
-
-		annotation SummarizationSetBy = Automatic
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition fact_Colaboradores = m
 		mode: import
-		source =
+		source = ```
 				let
-				    Source = Excel.Workbook(File.Contents("T:\12-TI\DASHBOARD\DASHBOARD DP\04-DP.QUADRO DE FUNCIONARIOS.BH-UDI.2025.PLANILHA DE COLABORADORES -  SETEMBRO 2025.xls"), null, true),
-				    #"'LISTA DE COLABORADORES - UDI$'FiltrarBancoDeD1" = Source{[Name="'LISTA DE COLABORADORES - UDI$'FiltrarBancoDeD"]}[Data],
-				    #"Promoted Headers" = Table.PromoteHeaders(#"'LISTA DE COLABORADORES - UDI$'FiltrarBancoDeD1", [PromoteAllScalars=true])
+				    Source = Folder.Contents( PastaLocal )
+				    {[Name="fact_Colaboradores"]}[Content],
+				
+				    FiltrarArquivos = Table.SelectRows( Source, each Text.EndsWith( [Name], ".xls" ) ),
+				
+				    ColunasSelecionadas = FiltrarArquivos[ [Content], [Name] ],
+				
+				    ListaTabelas = Table.AddColumn(
+				        ColunasSelecionadas,
+				            "Tabelas", each 
+				                fxColaboradores( 
+				                    [Content],
+				                    Text.BetweenDelimiters( [Name], " ", ".xls" )
+				                ), 
+				            type table 
+				        )
+				        [Tabelas],
+				
+				    CombinarTabelas = Table.Combine( ListaTabelas )
 				in
-				    #"Promoted Headers"
-
-	changedProperty = Name
+				    CombinarTabelas
+				```
 
 	annotation PBI_NavigationStepName = Navigation
 

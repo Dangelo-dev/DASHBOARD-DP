@@ -10,13 +10,15 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
 
-annotation PBI_QueryOrder = ["fact_Colaboradores"]
+annotation PBI_QueryOrder = ["PastaLocal","fact_Colaboradores","fxColaboradores","dim_Lojas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table fact_Colaboradores
 ref table dim_Calendario
 ref table Medidas
+ref table dim_Lojas
+ref table dim_Visao
 
 ref cultureInfo pt-BR
 

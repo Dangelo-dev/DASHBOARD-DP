@@ -10,43 +10,75 @@
       "nodes": [
         {
           "location": {
-            "x": 284,
-            "y": 50
+            "x": 193.93423453252996,
+            "y": 236.45193552914856
           },
           "nodeIndex": "dim_Calendario",
+          "nodeLineageTag": "e44cc038-472a-45fc-851b-fd8949d1a19e",
           "size": {
-            "height": 200,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
-        },
-        {
-          "location": {
-            "x": 568,
-            "y": 50
-          },
-          "nodeIndex": "Medidas",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 200
         },
         {
           "location": {
             "x": 0,
             "y": 0
           },
-          "nodeIndex": "fact_Colaboradores",
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "d29aad8c-b158-4c1f-bf5e-e4c4b1ea5853",
           "size": {
-            "height": 300,
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 573.57671692441465,
+            "y": 507.2124686852261
+          },
+          "nodeIndex": "fact_Colaboradores",
+          "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 949.96627121023073,
+            "y": 241.19223897480489
+          },
+          "nodeIndex": "dim_Lojas",
+          "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1233.9662712102308,
+            "y": 217.60623434261305
+          },
+          "nodeIndex": "dim_Visao",
+          "size": {
+            "height": 200,
             "width": 234
           },
           "zIndex": 0
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 63.287087723234038,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

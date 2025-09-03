@@ -1,0 +1,8 @@
+relationship AutoDetected_2258a1ff-108e-4d03-9034-4168b0dfec3e
+	fromColumn: fact_Colaboradores.'CENTRO DE CUSTO'
+	toColumn: dim_Lojas.'CENTRO DE CUSTO'
+
+relationship 7b6db7e9-a236-0ae0-fa06-63d6c504f087
+	fromColumn: fact_Colaboradores.MesAno
+	toColumn: dim_Calendario.Date
+
