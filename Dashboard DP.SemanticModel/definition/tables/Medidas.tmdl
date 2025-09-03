@@ -1,0 +1,25 @@
+table Medidas
+	lineageTag: d29aad8c-b158-4c1f-bf5e-e4c4b1ea5853
+
+	measure 'Qtd Funcionarios' = COUNT( 'fact_Colaboradores'[COLABORADORES] )
+		formatString: 0
+		lineageTag: 720e92f7-45a4-425a-bccc-76a41c4312d9
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 4c634a75-6995-48cd-a494-7490b4792572
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Medidas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = d5950f6bcf084abb9f914fe44159ea1f
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

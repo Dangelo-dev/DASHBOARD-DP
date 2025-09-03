@@ -1,0 +1,20 @@
+table dim_Calendario
+	lineageTag: e44cc038-472a-45fc-851b-fd8949d1a19e
+
+	column Date
+		formatString: Short Date
+		lineageTag: e61b80df-2ade-40e5-a39b-61ee3403162f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dim_Calendario = calculated
+		mode: import
+		source =
+				
+				CALENDAR( DATE(2025, 01, 01), DATE(2027, 01, 01) )
+
+	annotation PBI_Id = 5c1b69b0de934955b6c0f560e036d9bc
+
