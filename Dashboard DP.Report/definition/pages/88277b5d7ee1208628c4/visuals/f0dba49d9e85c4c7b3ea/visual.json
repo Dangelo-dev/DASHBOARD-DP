@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "f0dba49d9e85c4c7b3ea",
   "position": {
-    "x": 569.72776769509983,
-    "y": 231.72413793103448,
+    "x": 569.31180968564149,
+    "y": 230.00849617672046,
     "z": 6000,
-    "height": 355.42649727767696,
-    "width": 1291.0344827586207,
+    "height": 358.87850467289718,
+    "width": 1291.96261682243,
     "tabOrder": 5000
   },
   "visual": {
@@ -20,15 +20,33 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_Colaboradores"
+                      "Entity": "aux_Diretoria"
                     }
                   },
                   "Property": "DIRETORIA"
                 }
               },
-              "queryRef": "fact_Colaboradores.DIRETORIA",
-              "nativeQueryRef": "DIRETORIA",
+              "queryRef": "Eixo.DIRETORIA",
+              "nativeQueryRef": "DIRETORIA1",
               "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Eixo Ordinal Diretoria"
+                }
+              },
+              "queryRef": "Medidas.Eixo Ordinal",
+              "nativeQueryRef": "Eixo Ordinal Diretoria"
             }
           ]
         },
@@ -42,11 +60,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd Funcionarios"
+                  "Property": "Totalizador Diretoria"
                 }
               },
-              "queryRef": "Medidas.Qtd Funcionarios",
-              "nativeQueryRef": "Qtd Funcionarios"
+              "queryRef": "Medidas.Totalizador",
+              "nativeQueryRef": "Totalizador Diretoria"
             }
           ]
         }
@@ -61,13 +79,12 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Qtd Funcionarios"
+                "Property": "Eixo Ordinal Diretoria"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
@@ -92,6 +109,18 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Eixo Y Diretoria"
                 }
               }
             }
@@ -123,14 +152,14 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "11D"
                 }
               }
             },
@@ -145,6 +174,34 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
+            },
+            "preferredCategoryWidth": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
@@ -166,8 +223,8 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                      "ColorId": 0,
+                      "Percent": -0.5
                     }
                   }
                 }
@@ -190,7 +247,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "12D"
                 }
               }
             },
@@ -204,7 +261,105 @@
             "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "0L"
+                  "Value": "1L"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "detailFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "detailFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "detailBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelDetail": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Totalizador Diretoria"
+                }
+              }
+            },
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Pct Colaboradores Diretoria"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

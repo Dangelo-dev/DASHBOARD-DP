@@ -1,9 +1,146 @@
 table Medidas
 	lineageTag: d29aad8c-b158-4c1f-bf5e-e4c4b1ea5853
 
-	measure 'Qtd Funcionarios' = COUNT( 'fact_Colaboradores'[COLABORADORES] )
+	measure 'Qtd Funcionarios' = ```
+			
+			CALCULATE(
+			    COUNT(fact_Colaboradores[COLABORADORES]),
+			    TREATAS(VALUES(aux_Diretoria[MesAno]), fact_Colaboradores[MesAno]),
+			    TREATAS(VALUES(aux_Diretoria[DIRETORIA]), fact_Colaboradores[DIRETORIA]),
+			    TREATAS(VALUES(aux_Time[TIME]), fact_Colaboradores[TIME])
+			)
+			
+			```
 		formatString: 0
 		lineageTag: 720e92f7-45a4-425a-bccc-76a41c4312d9
+
+	measure 'Pct Colaboradores Diretoria' = ```
+			
+			VAR _Qtd = [Qtd Funcionarios]
+			VAR _Total =
+			    CALCULATE(
+			        COUNT(fact_Colaboradores[COLABORADORES]),
+			        ALL(fact_Colaboradores[DIRETORIA])
+			    )
+			RETURN
+			    IF(
+			        SELECTEDVALUE(aux_Diretoria[DIRETORIA]) = "TOTAL",
+			        1,                                   -- 100%
+			        DIVIDE(_Qtd, _Total)
+			    )
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: facf9b43-632c-4d89-8e0a-2718fd7dd12f
+
+	measure 'Totalizador Diretoria' = ```
+			
+			VAR _Colaboradores = CALCULATE( [Qtd Funcionarios] )
+			VAR _Total =
+			IF(
+			    SELECTEDVALUE( aux_Diretoria[DIRETORIA] ) = "TOTAL",
+			    CALCULATE( 
+			        COUNT( fact_Colaboradores[COLABORADORES] ),
+			        ALL( fact_Colaboradores )
+			    )
+			)
+			RETURN
+			    _Colaboradores + _Total
+			```
+		formatString: 0
+		lineageTag: 5bf2c2f6-e313-4afc-8038-a5310d1c6ecb
+
+	measure 'Eixo Ordinal Diretoria' = ```
+			
+			SWITCH(
+			    TRUE(), 
+			    SELECTEDVALUE(aux_Diretoria[DIRETORIA]) IN VALUES( fact_Colaboradores[DIRETORIA] ),
+			    RANK(
+			        DENSE,
+			        ALL(aux_Diretoria[DIRETORIA]),
+			        ORDERBY([Qtd Funcionarios], ASC)
+			    ) +9
+			)
+			```
+		formatString: 0
+		lineageTag: cc3972e4-eac0-48ad-983e-19adc694b555
+
+	measure 'Totalizador Time' = ```
+			
+			VAR _Colaboradores = [Qtd Funcionarios]
+			VAR _Total =
+			IF(
+			    SELECTEDVALUE(aux_Time[TIME]) = "TOTAL",
+			    CALCULATE( 
+			        COUNT( fact_Colaboradores[COLABORADORES] ),
+			        ALL( fact_Colaboradores )
+			    )
+			)
+			RETURN
+			    _Colaboradores + _Total
+			```
+		formatString: 0
+		lineageTag: 7718a422-b129-44e8-a843-1c7057776a2c
+
+	measure 'Eixo Ordinal Time' = ```
+			
+			SWITCH(
+			    TRUE(), 
+			    SELECTEDVALUE(aux_Time[TIME]) IN VALUES( fact_Colaboradores[TIME] ),
+			    RANK(
+			        DENSE,
+			        ALL(aux_Time[TIME]),
+			        ORDERBY([Qtd Funcionarios], ASC)
+			    ) +9
+			)
+			```
+		formatString: 0
+		lineageTag: 77245709-4be0-4243-b315-87ade56707ac
+
+	measure 'Eixo Y Diretoria' = ```
+			
+			VAR _Tabela = ALLSELECTED( aux_Diretoria[DIRETORIA], aux_Diretoria[DIRETORIA] )
+			VAR _MaiorValor = MAXX( _Tabela, [Totalizador Diretoria] )
+			VAR _Deslocamento = 1.2
+			RETURN
+			
+			_MaiorValor * _Deslocamento 
+			```
+		lineageTag: cd4e2aaa-531a-4fdc-b109-0a356f00313b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Eixo Y Time' = ```
+			
+			VAR _Tabela = ALLSELECTED( aux_Time[TIME], aux_Time[TIME] )
+			VAR _MaiorValor = MAXX( _Tabela, [Totalizador Time] )
+			VAR _Deslocamento = 1.2
+			RETURN
+			
+			_MaiorValor * _Deslocamento 
+			```
+		lineageTag: 6d86633a-74f7-46d4-85d6-6d71cfb315b3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pct Colaboradores Time' = ```
+			
+			VAR _Qtd = [Qtd Funcionarios]
+			VAR _Total =
+			    CALCULATE(
+			        COUNT(fact_Colaboradores[COLABORADORES]),
+			        ALL(fact_Colaboradores[TIME])
+			    )
+			RETURN
+			    IF(
+			        SELECTEDVALUE(aux_Time[TIME]) = "TOTAL",
+			        1,                                   -- 100%
+			        DIVIDE(_Qtd, _Total)
+			    )
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: c5b56528-9117-4b1a-92a4-baa8730f850b
 
 	column Column
 		isHidden

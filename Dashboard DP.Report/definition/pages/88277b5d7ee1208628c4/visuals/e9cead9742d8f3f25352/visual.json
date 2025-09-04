@@ -2,37 +2,37 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "e9cead9742d8f3f25352",
   "position": {
-    "x": 569.58435207823959,
-    "y": 610.26894865525674,
+    "x": 569.31180968564149,
+    "y": 610.09345794392527,
     "z": 11001,
-    "height": 411.54034229828852,
-    "width": 635.30562347188265,
+    "height": 419.23534409515719,
+    "width": 637.82497875955823,
     "tabOrder": 10001
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_Colaboradores"
+                      "Entity": "aux_Time"
                     }
                   },
                   "Property": "TIME"
                 }
               },
-              "queryRef": "fact_Colaboradores.TIME",
+              "queryRef": "aux_Time.TIME",
               "nativeQueryRef": "TIME",
               "active": true
             }
           ]
         },
-        "Values": {
+        "Tooltips": {
           "projections": [
             {
               "field": {
@@ -42,11 +42,29 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Qtd Funcionarios"
+                  "Property": "Eixo Ordinal Time"
                 }
               },
-              "queryRef": "Medidas.Qtd Funcionarios",
-              "nativeQueryRef": "Qtd Funcionarios"
+              "queryRef": "Medidas.Eixo Ordinal Time",
+              "nativeQueryRef": "Eixo Ordinal Time"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Totalizador Time"
+                }
+              },
+              "queryRef": "Medidas.Totalizador Time",
+              "nativeQueryRef": "Totalizador Time"
             }
           ]
         }
@@ -61,56 +79,15 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Qtd Funcionarios"
+                "Property": "Eixo Ordinal Time"
               }
             },
             "direction": "Descending"
           }
-        ],
-        "isDefaultSort": true
+        ]
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
@@ -141,6 +118,181 @@
                   "Value": "true"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "detailColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "detailFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "detailFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
+            "detailBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "dynamicLabelValue": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Pct Colaboradores Time"
+                }
+              }
+            },
+            "dynamicLabelDetail": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Totalizador Time"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "highlightMatching": 1
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Eixo Y Time"
+                }
+              }
             }
           }
         }
@@ -157,14 +309,7 @@
                 }
               }
             },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "bold": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -190,10 +335,17 @@
                 }
               }
             },
-            "fontSize": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -209,11 +361,63 @@
                   "Value": "false"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d6fa49b619a926b7f293",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Totalizador Time"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "352ec69d40362b5aa20e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Eixo Ordinal Time"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

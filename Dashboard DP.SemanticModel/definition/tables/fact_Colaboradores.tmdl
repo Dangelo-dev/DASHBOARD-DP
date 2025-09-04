@@ -68,14 +68,6 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column QUADRO
-		dataType: string
-		lineageTag: e357f653-b258-4965-b980-6d2c0a6eae24
-		summarizeBy: none
-		sourceColumn: QUADRO
-
-		annotation SummarizationSetBy = Automatic
-
 	column MesAno
 		dataType: dateTime
 		formatString: Short Date

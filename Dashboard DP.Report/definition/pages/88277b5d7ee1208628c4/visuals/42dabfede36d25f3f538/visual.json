@@ -246,5 +246,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "isHidden": true
 }

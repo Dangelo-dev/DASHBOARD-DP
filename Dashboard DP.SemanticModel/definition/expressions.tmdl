@@ -12,7 +12,7 @@ expression fxColaboradores = ```
 		    AbaUDI = Source{6}[Data], // Responsavel por carregar as informações de UDI
 		    AbaBH = Source{4}[Data], // Responsavel por carregar as informações de BH
 		
-		    ColunasNecessarias = { "COLABORADORES", "DATA DE ADMISSÃO", "CARGO", "TIME", "DIRETORIA", "SETOR-DEPARTAMENTO ", "QUADRO", "UNIDADE", "CENTRO DE CUSTO"}, // Adicionar somente aqui caso haja mais colunas necessárias futuramente
+		    ColunasNecessarias = { "COLABORADORES", "DATA DE ADMISSÃO", "CARGO", "TIME", "DIRETORIA", "SETOR-DEPARTAMENTO ", "UNIDADE", "CENTRO DE CUSTO"}, // Adicionar somente aqui caso haja mais colunas necessárias futuramente
 		
 		    // Tipagem centralizada dos dados
 		    DefinirTipagem =  {
@@ -22,7 +22,6 @@ expression fxColaboradores = ```
 		            {"TIME", type text}, 
 		            {"DIRETORIA", type text}, 
 		            {"SETOR-DEPARTAMENTO ", type text}, 
-		            {"QUADRO", type text}, 
 		            {"UNIDADE", type text}, 
 		            {"CENTRO DE CUSTO", type text}
 		        },

@@ -18,7 +18,8 @@ ref table fact_Colaboradores
 ref table dim_Calendario
 ref table Medidas
 ref table dim_Lojas
-ref table dim_Visao
+ref table aux_Diretoria
+ref table aux_Time
 
 ref cultureInfo pt-BR
 

@@ -27,7 +27,8 @@
                 }
               },
               "queryRef": "dim_Lojas.COD LOJA",
-              "nativeQueryRef": "COD LOJA"
+              "nativeQueryRef": "LOJA",
+              "displayName": "LOJA"
             },
             {
               "field": {
@@ -45,9 +46,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -57,13 +55,27 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "79.18181594388675D"
+                  "Value": "75.12449989804699D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "dim_Lojas.COD LOJA"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "279.6510699075781D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_Colaboradores.COLABORADORES"
           }
         }
       ]
@@ -137,6 +149,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "isHidden": true
+  }
 }

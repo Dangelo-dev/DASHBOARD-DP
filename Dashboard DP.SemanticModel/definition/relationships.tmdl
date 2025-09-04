@@ -6,3 +6,21 @@ relationship 7b6db7e9-a236-0ae0-fa06-63d6c504f087
 	fromColumn: fact_Colaboradores.MesAno
 	toColumn: dim_Calendario.Date
 
+relationship 486d0f65-1049-8f71-b9ff-bc9b2402cd16
+	toCardinality: many
+	fromColumn: aux_Diretoria.DIRETORIA
+	toColumn: fact_Colaboradores.DIRETORIA
+
+relationship ae3b2d36-769e-b21a-62fd-7bea12cee81f
+	toCardinality: many
+	fromColumn: aux_Time.TIME
+	toColumn: fact_Colaboradores.TIME
+
+relationship 60d47653-3676-154f-1d1e-7fe81cdfed54
+	fromColumn: aux_Diretoria.MesAno
+	toColumn: dim_Calendario.Date
+
+relationship 31f381de-c4dd-438c-4847-2de1a860f22b
+	fromColumn: aux_Time.MesAno
+	toColumn: dim_Calendario.Date
+

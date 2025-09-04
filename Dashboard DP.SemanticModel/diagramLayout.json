@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 193.93423453252996,
-            "y": 236.45193552914856
+            "x": 407.24788958706438,
+            "y": 247.51264356901322
           },
           "nodeIndex": "dim_Calendario",
           "nodeLineageTag": "e44cc038-472a-45fc-851b-fd8949d1a19e",
@@ -38,8 +38,8 @@
         },
         {
           "location": {
-            "x": 573.57671692441465,
-            "y": 507.2124686852261
+            "x": 401.345691732235,
+            "y": 464.54973767431909
           },
           "nodeIndex": "fact_Colaboradores",
           "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
@@ -52,8 +52,8 @@
         },
         {
           "location": {
-            "x": 949.96627121023073,
-            "y": 241.19223897480489
+            "x": 919.94434938774077,
+            "y": 479.787512406173
           },
           "nodeIndex": "dim_Lojas",
           "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
@@ -66,15 +66,31 @@
         },
         {
           "location": {
-            "x": 1233.9662712102308,
-            "y": 217.60623434261305
+            "x": 168.97809708611129,
+            "y": 97.5185470526529
           },
-          "nodeIndex": "dim_Visao",
+          "nodeIndex": "aux_Diretoria",
+          "nodeLineageTag": "a4d5a0e9-088d-4f95-92c4-fb93d9cbabce",
           "size": {
-            "height": 200,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 652.48904854305579,
+            "y": 101.69266200282208
+          },
+          "nodeIndex": "aux_Time",
+          "nodeLineageTag": "7f3ea877-f3a4-4596-b3a8-7e90cd4b866b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 200
         }
       ],
       "name": "All tables",
