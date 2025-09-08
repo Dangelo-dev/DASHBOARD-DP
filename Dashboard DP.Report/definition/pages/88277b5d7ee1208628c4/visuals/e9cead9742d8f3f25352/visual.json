@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "e9cead9742d8f3f25352",
   "position": {
-    "x": 569.31180968564149,
-    "y": 610.09345794392527,
-    "z": 11001,
-    "height": 419.23534409515719,
-    "width": 637.82497875955823,
-    "tabOrder": 10001
+    "x": 1252.8954191875539,
+    "y": 229.00605012964562,
+    "z": 11000,
+    "height": 345.16853932584269,
+    "width": 607.3638720829731,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -305,7 +305,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Qtd Funcionarios por Time'"
+                  "Value": "'Qtd Colaboradores por Time'"
                 }
               }
             },
@@ -387,37 +387,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "d6fa49b619a926b7f293",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Totalizador Time"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "352ec69d40362b5aa20e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Eixo Ordinal Time"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

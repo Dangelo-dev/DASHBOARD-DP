@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "f0dba49d9e85c4c7b3ea",
+  "name": "13311d50669bd7e70c87",
   "position": {
     "x": 592.42869490060491,
-    "y": 229.00605012964562,
-    "z": 5000,
-    "height": 345.16853932584269,
-    "width": 622.2990492653413,
-    "tabOrder": 4000
+    "y": 599.06655142610191,
+    "z": 12000,
+    "height": 428.14174589455484,
+    "width": 1267.8305963699222,
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "aux_Diretoria"
+                      "Entity": "aux_SetorDepartamento"
                     }
                   },
-                  "Property": "DIRETORIA"
+                  "Property": "SETOR-DEPARTAMENTO "
                 }
               },
-              "queryRef": "Eixo.DIRETORIA",
-              "nativeQueryRef": "DIRETORIA1",
+              "queryRef": "aux_SetorDepartamento.SETOR-DEPARTAMENTO ",
+              "nativeQueryRef": "SETOR-DEPARTAMENTO 1",
               "active": true
             }
           ]
@@ -42,11 +42,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Eixo Ordinal Diretoria"
+                  "Property": "Eixo Ordinal Setor"
                 }
               },
-              "queryRef": "Medidas.Eixo Ordinal",
-              "nativeQueryRef": "Eixo Ordinal Diretoria"
+              "queryRef": "Medidas.Eixo Ordinal Setor",
+              "nativeQueryRef": "Eixo Ordinal Setor"
             }
           ]
         },
@@ -60,11 +60,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Totalizador Diretoria"
+                  "Property": "Totalizador SetorDepartamento"
                 }
               },
-              "queryRef": "Medidas.Totalizador",
-              "nativeQueryRef": "Totalizador Diretoria"
+              "queryRef": "Medidas.Totalizador SetorDepartamento",
+              "nativeQueryRef": "Totalizador SetorDepartamento"
             }
           ]
         }
@@ -79,7 +79,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Eixo Ordinal Diretoria"
+                "Property": "Eixo Ordinal Setor"
               }
             },
             "direction": "Descending"
@@ -88,149 +88,10 @@
       }
     },
     "objects": {
-      "valueAxis": [
-        {
-          "properties": {
-            "logAxisScale": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "end": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Eixo Y Diretoria"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "categoryAxis": [
-        {
-          "properties": {
-            "axisType": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Categorical'"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "11D"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "concatenateLabels": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "25L"
-                }
-              }
-            },
-            "preferredCategoryWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "20D"
-                }
-              }
-            }
-          }
-        }
-      ],
       "labels": [
         {
           "properties": {
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -251,17 +112,22 @@
                 }
               }
             },
-            "labelDisplayUnits": {
+            "bold": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "true"
                 }
               }
             },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "1L"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
                 }
               }
             },
@@ -298,7 +164,21 @@
                 }
               }
             },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "1L"
+                }
+              }
+            },
             "detailBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -309,18 +189,6 @@
         },
         {
           "properties": {
-            "dynamicLabelDetail": {
-              "expr": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
-                  "Property": "Totalizador Diretoria"
-                }
-              }
-            },
             "dynamicLabelValue": {
               "expr": {
                 "Measure": {
@@ -329,7 +197,19 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Pct Colaboradores Diretoria"
+                  "Property": "Pct Colaboradores Setor"
+                }
+              }
+            },
+            "dynamicLabelDetail": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Totalizador SetorDepartamento"
                 }
               }
             }
@@ -346,20 +226,85 @@
           }
         }
       ],
-      "legend": [
+      "categoryAxis": [
         {
           "properties": {
-            "showGradientLegend": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "11D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "50L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Eixo Y Setor"
                 }
               }
             }
@@ -374,14 +319,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Qtd Colaboradores por Diretoria'"
+                  "Value": "'Qtd Colaboradores por Setor-Departamento'"
                 }
               }
             },
-            "alignment": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "'center'"
+                  "Value": "true"
                 }
               }
             },
@@ -397,10 +342,10 @@
                 }
               }
             },
-            "fontFamily": {
+            "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                  "Value": "'center'"
                 }
               }
             },
@@ -411,10 +356,10 @@
                 }
               }
             },
-            "fontSize": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
                 }
               }
             }
@@ -428,6 +373,26 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             }

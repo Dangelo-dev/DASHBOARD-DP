@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "dcfb8ef8bbcad074f6da",
   "position": {
-    "x": 1225.4364089775561,
-    "y": 610.02493765586041,
+    "x": 167.60587726879859,
+    "y": 718.54796888504745,
     "z": 4000,
-    "height": 420.14962593516208,
-    "width": 651.77057356608475,
-    "tabOrder": 3000
+    "height": 308.6603284356093,
+    "width": 384.99567847882452,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pieChart",
@@ -211,7 +211,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "17D"
+                  "Value": "14D"
                 }
               }
             }
@@ -246,23 +246,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ece7cd2afeab290e6d12",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "fact_Colaboradores"
-              }
-            },
-            "Property": "UNIDADE"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

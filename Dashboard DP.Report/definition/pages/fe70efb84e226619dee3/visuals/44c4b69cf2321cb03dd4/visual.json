@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "44c4b69cf2321cb03dd4",
   "position": {
-    "x": 10.078740157480315,
-    "y": 0,
+    "x": 4.0806045340050376,
+    "y": 35.365239294710328,
     "z": 0,
-    "height": 719.62204724409446,
-    "width": 1269.9212598425197
+    "height": 1044.6347607052896,
+    "width": 1413.249370277078
   },
   "visual": {
     "visualType": "tableEx",
@@ -111,9 +111,40 @@
               },
               "queryRef": "fact_Colaboradores.CENTRO DE CUSTO",
               "nativeQueryRef": "CENTRO DE CUSTO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_BancoHoras"
+                    }
+                  },
+                  "Property": "Saldo Acumulado"
+                }
+              },
+              "queryRef": "fact_BancoHoras.Saldo Acumulado",
+              "nativeQueryRef": "Saldo Acumulado"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Colaboradores"
+                  }
+                },
+                "Property": "COLABORADORES"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
       }
     },
     "objects": {
@@ -123,7 +154,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "278.2204724409449D"
+                  "Value": "361.96653370802954D"
                 }
               }
             }

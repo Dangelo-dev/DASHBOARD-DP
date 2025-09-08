@@ -4,10 +4,10 @@
   "position": {
     "x": 541.42857142857144,
     "y": 245.71428571428572,
-    "z": 25,
+    "z": 25000,
     "height": 54.285714285714292,
     "width": 145.71428571428572,
-    "tabOrder": 25
+    "tabOrder": 24000
   },
   "visual": {
     "visualType": "slicer",
@@ -174,20 +174,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cdefd4d20316a8e7cf16",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "f1a4436b0d6d85516939",
         "field": {
           "Measure": {
@@ -235,6 +221,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "c6e61f6ba5085be5e6e0",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Categorical"
       }
     ]
   }

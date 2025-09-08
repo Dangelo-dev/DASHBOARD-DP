@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4297edc4dd46dddb61cb",
   "position": {
-    "x": 267.99196995286843,
-    "y": 234.31421446384041,
-    "z": 11000,
-    "height": 53.865336658354117,
-    "width": 179.10224438902745,
-    "tabOrder": 10000
+    "x": 272.152117545376,
+    "y": 233.98444252376834,
+    "z": 10000,
+    "height": 54.762316335350036,
+    "width": 185.85998271391529,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "bookmarkNavigator",
@@ -18,7 +18,7 @@
             "selectedBookmark": {
               "expr": {
                 "Literal": {
-                  "Value": "'adcc8aef38cd046e2f87'"
+                  "Value": "'ef08a9f7aa362137028f'"
                 }
               }
             }

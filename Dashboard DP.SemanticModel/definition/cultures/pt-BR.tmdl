@@ -2,10 +2,10 @@ cultureInfo pt-BR
 
 	linguisticMetadata =
 			{
-			  "Version": "2.0.0",
+			  "Version": "4.1.0",
 			  "Language": "en-US",
 			  "Entities": {
-			    "dim_lojas.cod_loja": {
+			    "dim_loja.cod_loja": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "dim_Lojas",
@@ -14,6 +14,11 @@ cultureInfo pt-BR
 			      },
 			      "State": "Generated",
 			      "Terms": [
+			        {
+			          "cod loja": {
+			            "State": "Generated"
+			          }
+			        },
 			        {
 			          "LOJA": {
 			            "State": "Suggested",
@@ -25,6 +30,3447 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "fact_colaboradore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact colaboradore": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_Colaboradores": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.colaboradore": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "COLABORADORES"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colaboradore": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.data_de_admissão": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "DATA DE ADMISSÃO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data de admissão": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record de admissão": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_colaboradore.cargo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "CARGO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cargo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "consignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "shipment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "payload": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "load": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "freight": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "TIME"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "DIRETORIA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.setordepartamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "SETOR-DEPARTAMENTO "
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "setor-departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "setor departamento": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.unidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "UNIDADE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.centro_de_custo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "CENTRO DE CUSTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "centro de custo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_colaboradore.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "MesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_colaboradore.cpf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_Colaboradores",
+			          "ConceptualProperty": "CPF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cpf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim calendario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_Calendario": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario",
+			          "ConceptualProperty": "Date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "dim_calendario.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario",
+			          "ConceptualProperty": "MesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.numero_mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario",
+			          "ConceptualProperty": "NumeroMesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "numero mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "numero me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "NumeroMesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.column": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Column"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "column": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pilaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "pillar": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "post": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "support": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "pole": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "buttress": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "underpinning": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "contribution": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "medida.qtd_funcionarios": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Qtd Funcionarios"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "qtd funcionarios": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.pct_colaboradores_diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Pct Colaboradores Diretoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pct colaboradores diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.totalizador_diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Totalizador Diretoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "totalizador diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_ordinal_diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Ordinal Diretoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo ordinal diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.totalizador_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Totalizador Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "totalizador time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "totalizador duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "totalizador interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "totalizador moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "totalizador period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "totalizador timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_ordinal_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Ordinal Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo ordinal time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eixo ordinal duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo ordinal interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo ordinal moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo ordinal period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "eixo ordinal timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_y_diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Y Diretoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo y diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_y_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Y Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo y time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eixo y duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo y interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo y moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "eixo y period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "eixo y timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.pct_colaboradores_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Pct Colaboradores Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pct colaboradores time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "pct colaboradore duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pct colaboradore interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pct colaboradore moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "pct colaboradore period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        },
+			        {
+			          "pct colaboradore timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "medida.filtro_data_colaboradores": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Filtro Data Colaboradores"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "filtro data colaboradores": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "filtro information colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "filtro fact colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "filtro info colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "filtro statistic colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "filtro document colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "filtro figure colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "filtro record colaboradore": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "medida.totalizador_SetorDepartamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Totalizador SetorDepartamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "totalizador SetorDepartamento": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_ordinal_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Ordinal Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo ordinal setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_x_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Y Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo x setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.pct_colaboradores_setor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Pct Colaboradores Setor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pct colaboradores setor": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_loja": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Lojas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dim loja": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "dim_Lojas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_loja.centro_de_custo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Lojas",
+			          "ConceptualProperty": "CENTRO DE CUSTO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "centro de custo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_loja.nome_loja": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Lojas",
+			          "ConceptualProperty": "NOME LOJA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome loja": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_loja.tipo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Lojas",
+			          "ConceptualProperty": "TIPO"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "tipo": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "dim_loja.unidade": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Lojas",
+			          "ConceptualProperty": "UNIDADE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "unidade": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aux_diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Diretoria"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aux diretoria": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_Diretoria": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "aux_diretoria.diretoria": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Diretoria",
+			          "ConceptualProperty": "DIRETORIA"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "diretoria": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aux_diretoria.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Diretoria",
+			          "ConceptualProperty": "MesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "aux_time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Time"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aux time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_Time": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "aux duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aux interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aux moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "aux period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "aux timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "aux_time.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Time",
+			          "ConceptualProperty": "MesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "aux_time.time": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_Time",
+			          "ConceptualProperty": "TIME"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "time": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "duration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "interval": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "timetable": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "fact_banco_hora": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "fact banco hora": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "fact_BancoHoras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "fact_banco_hora.cpf": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras",
+			          "ConceptualProperty": "CPF"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "cpf": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_banco_hora.data_saldo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras",
+			          "ConceptualProperty": "Data Saldo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "data saldo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record saldo": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "fact_banco_hora.saldo_minuto": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras",
+			          "ConceptualProperty": "Saldo Minutos"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo minuto": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "fact_banco_hora.saldo_acumulado": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras",
+			          "ConceptualProperty": "Saldo Acumulado"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo acumulado": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Saldo Horas": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SetorDepartamento"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aux setor departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_SetorDepartamento": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento.mes_ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SetorDepartamento",
+			          "ConceptualProperty": "MesAno"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me ano": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesAno": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "aux_setor_departamento.setordepartamento": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SetorDepartamento",
+			          "ConceptualProperty": "SETOR-DEPARTAMENTO "
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "setor-departamento": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "setor departamento": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
+			    "dim_loja_has_cod_loja": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.cod_loja": {
+			          "Target": {
+			            "Entity": "dim_loja.cod_loja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.cod_loja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_cod_loja"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_colaboradores"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_data_de_admissão": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.data_de_admissão": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.data_de_admissão"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.data_de_admissão"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_data_de_admissãos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_cargo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.cargo": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.cargo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.cargo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_cargoes"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.time": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_times"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.diretoria": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_diretorias"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_setordepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.setordepartamento": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.setordepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.setordepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_setordepartamentos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_unidade": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.unidade": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.unidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.unidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_unidades"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.mes_ano": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_cpf": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.cpf": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.cpf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.cpf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_cpfs"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.date": {
+			          "Target": {
+			            "Entity": "dim_calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_numero_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.numero_mes_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.numero_mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.numero_mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_numero_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_qtd_funcionarios": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.qtd_funcionarios": {
+			          "Target": {
+			            "Entity": "medida.qtd_funcionarios"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_funcionarios"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_qtd_funcionarios"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_pct_colaboradores_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.pct_colaboradores_diretoria": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_pct_colaboradores_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_diretoria": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_totalizador_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.totalizador_diretoria": {
+			          "Target": {
+			            "Entity": "medida.totalizador_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_totalizador_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_diretoria": {
+			          "Target": {
+			            "Entity": "medida.totalizador_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_diretoria"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_totalizador_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.totalizador_time": {
+			          "Target": {
+			            "Entity": "medida.totalizador_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_totalizador_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_time": {
+			          "Target": {
+			            "Entity": "medida.totalizador_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_time"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_time": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_time"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_eixo_y_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.eixo_y_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_eixo_y_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_y_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_y_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_y_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_eixo_y_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.eixo_y_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_eixo_y_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_y_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_y_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_y_time"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_pct_colaboradores_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.pct_colaboradores_time": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_pct_colaboradores_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_time": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_filtro_data_colaboradores": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.filtro_data_colaboradores": {
+			          "Target": {
+			            "Entity": "medida.filtro_data_colaboradores"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.filtro_data_colaboradores"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_filtro_data_colaboradores"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_totalizador_SetorDepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.totalizador_SetorDepartamento": {
+			          "Target": {
+			            "Entity": "medida.totalizador_SetorDepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_SetorDepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_totalizador_SetorDepartamento"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_SetorDepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_SetorDepartamento": {
+			          "Target": {
+			            "Entity": "medida.totalizador_SetorDepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_SetorDepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_SetorDepartamento"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_setor"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_eixo_x_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.eixo_x_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_x_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_x_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_eixo_x_setor"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_x_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_x_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_x_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_x_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_x_setor"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_pct_colaboradores_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.pct_colaboradores_setor": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_pct_colaboradores_setor"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_setor": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_setor"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_centro_de_custo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.centro_de_custo": {
+			          "Target": {
+			            "Entity": "dim_loja.centro_de_custo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.centro_de_custo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_centro_de_custos"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_nome_loja": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.nome_loja": {
+			          "Target": {
+			            "Entity": "dim_loja.nome_loja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.nome_loja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_nome_loja"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.tipo": {
+			          "Target": {
+			            "Entity": "dim_loja.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_tipos"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_unidade": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.unidade": {
+			          "Target": {
+			            "Entity": "dim_loja.unidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.unidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_unidades"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "aux_diretoria.mes_ano": {
+			          "Target": {
+			            "Entity": "aux_diretoria.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "aux_diretoria.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "aux_time_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "aux_time.mes_ano": {
+			          "Target": {
+			            "Entity": "aux_time.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "aux_time.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_data_saldo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.data_saldo": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.data_saldo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.data_saldo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_data_saldos"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_saldo_minuto": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.saldo_minuto": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.saldo_minuto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.saldo_minuto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_saldo_minutos"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_saldo_acumulado": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.saldo_acumulado": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.saldo_acumulado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.saldo_acumulado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_saldo_acumulados"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "aux_setor_departamento.mes_ano": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "aux_setor_departamento.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_dim_loja": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "dim_loja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_dim_loja"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_fact_colaboradores"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_fact_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_fact_colaboradores"
+			        }
+			      ]
+			    },
+			    "aux_time_has_fact_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_fact_colaboradores"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_fact_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_fact_colaboradores"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_fact_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_fact_colaboradores"
+			        }
+			      ]
+			    }
+			  },
+			  "Agents": {
+			    "Internal": {
+			      "Version": "1.1.0"
 			    }
 			  }
 			}

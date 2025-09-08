@@ -30,6 +30,17 @@ table fact_BancoHoras
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column 'Saldo Acumulado'
+		dataType: string
+		lineageTag: c25b24db-ed13-4aa7-8aea-885df56fdef9
+		summarizeBy: none
+		sourceColumn: Saldo Acumulado
+		sortByColumn: 'Saldo Minutos'
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_BancoHoras = m
 		mode: import
 		source = ```
@@ -51,11 +62,17 @@ table fact_BancoHoras
 				            // Define a coluna de Data como date
 				            DefinirTipagem = Table.TransformColumnTypes( excel, {"Data Saldo", type date } ),
 				
+				            // Define como zerado os valores que não foram preenchidos pelo script e ocultar colaboradores sem CPF
+				            TratarDadosNulos = 
+				                Table.SelectRows(
+				                    Table.ReplaceValue( DefinirTipagem, null, "00:00", Replacer.ReplaceValue,{ "Saldo Acumulado" } ),
+				                each ( [CPF] <> null) ),
+				
 				            // Função para converter as horas em minutos ( tratando horas negativas )
 				            fxSaldoAcumulado = 
 				                (SaldoTxt as text) as nullable number =>
 				                let
-				                    Limpar = Text.Trim( SaldoTxt ),
+				                    Limpar = Text.Trim( Text.From( SaldoTxt )),
 				                    TemDoisPontos = Text.Contains( Limpar, ":" ),
 				                    EhNegativo = Text.StartsWith( Limpar, "-" ),
 				
@@ -80,7 +97,7 @@ table fact_BancoHoras
 				            
 				            // Adiciona a coluna nova tratada pela função
 				            AdicionarMinutos = Table.AddColumn (
-				                DefinirTipagem, 
+				                TratarDadosNulos, 
 				                "Saldo Minutos", 
 				                each fxSaldoAcumulado( [Saldo Acumulado] ),
 				                type number
@@ -89,7 +106,8 @@ table fact_BancoHoras
 				            ColunasNecessarias = { 
 				                "CPF", // Relacionar com a dim_Colaboradores
 				                "Data Saldo", // Mensurar periodo e relacionar com a dim_Calendario
-				                "Saldo Minutos" }, // Informação convertida para minutos
+				                "Saldo Minutos", // Informação convertida para minutos
+				                "Saldo Acumulado" }, // Tempo em horas
 				
 				            // Seleciona somente as colunas necessárias conforme descrição na 'ColunasNecessarias'
 				            SelecionarColunas = Table.SelectColumns( AdicionarMinutos, ColunasNecessarias )

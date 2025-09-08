@@ -24,3 +24,17 @@ relationship 31f381de-c4dd-438c-4847-2de1a860f22b
 	fromColumn: aux_Time.MesAno
 	toColumn: dim_Calendario.Date
 
+relationship ce442d75-c866-fff0-e87e-0c1e6f7ea54a
+	toCardinality: many
+	fromColumn: fact_BancoHoras.CPF
+	toColumn: fact_Colaboradores.CPF
+
+relationship 784e53cf-b028-ec60-73c7-ac67c25aaa0c
+	toCardinality: many
+	fromColumn: aux_SetorDepartamento.'SETOR-DEPARTAMENTO '
+	toColumn: fact_Colaboradores.'SETOR-DEPARTAMENTO '
+
+relationship 3de1de55-e653-5b9a-de57-775bd26eb697
+	fromColumn: aux_SetorDepartamento.MesAno
+	toColumn: dim_Calendario.Date
+

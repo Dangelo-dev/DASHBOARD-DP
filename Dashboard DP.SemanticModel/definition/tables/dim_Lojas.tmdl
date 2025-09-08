@@ -22,6 +22,9 @@ table dim_Lojas
 		lineageTag: 2a8763d2-d4c0-4f1e-98b0-0497e4d2ff6e
 		summarizeBy: none
 		sourceColumn: NOME LOJA
+		sortByColumn: 'COD LOJA'
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

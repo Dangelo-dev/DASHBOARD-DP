@@ -19,7 +19,7 @@
             "height": 104,
             "width": 234
           },
-          "zIndex": 0,
+          "zIndex": 1,
           "expandedHeight": 200
         },
         {
@@ -33,36 +33,35 @@
             "height": 72,
             "width": 234
           },
-          "zIndex": 0,
+          "zIndex": 2,
           "expandedHeight": 200
         },
         {
           "location": {
-            "x": 401.345691732235,
-            "y": 464.54973767431909
+            "x": 396.60538828657877,
+            "y": 481.93085030839222
           },
           "nodeIndex": "fact_Colaboradores",
           "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
           "size": {
-            "height": 128,
-            "width": 234
+            "height": 200,
+            "width": 249.80101148552114
           },
-          "zIndex": 0,
+          "zIndex": 8,
           "expandedHeight": 300
         },
         {
           "location": {
-            "x": 919.94434938774077,
-            "y": 479.787512406173
+            "x": 38.247908495665342,
+            "y": 712.06238124333277
           },
           "nodeIndex": "dim_Lojas",
           "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
           "size": {
-            "height": 104,
+            "height": 200,
             "width": 234
           },
-          "zIndex": 0,
-          "expandedHeight": 200
+          "zIndex": 3
         },
         {
           "location": {
@@ -75,7 +74,7 @@
             "height": 128,
             "width": 234
           },
-          "zIndex": 0,
+          "zIndex": 6,
           "expandedHeight": 200
         },
         {
@@ -85,6 +84,34 @@
           },
           "nodeIndex": "aux_Time",
           "nodeLineageTag": "7f3ea877-f3a4-4596-b3a8-7e90cd4b866b",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4,
+          "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 786.79764616998455,
+            "y": 760.66946164197986
+          },
+          "nodeIndex": "fact_BancoHoras",
+          "nodeLineageTag": "e88ac8a5-a991-4373-9ed2-e600c7d3f32e",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 5,
+          "expandedHeight": 152
+        },
+        {
+          "location": {
+            "x": 882.765609492284,
+            "y": 441.35665264348012
+          },
+          "nodeIndex": "aux_SetorDepartamento",
+          "nodeLineageTag": "a9990ffe-e20e-4c65-9167-bc271ce789db",
           "size": {
             "height": 128,
             "width": 234

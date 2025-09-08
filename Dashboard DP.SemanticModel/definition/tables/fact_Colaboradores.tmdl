@@ -136,7 +136,8 @@ table fact_Colaboradores
 				                let
 				                    SelecionarColunas = Table.SelectColumns( tabela, ColunasNecessarias ),
 				                    TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
-				                    AdicionarColuna = Table.AddColumn( TiparColuna, "MesAno", each Date.FromText( MesAno ), type date )
+				                    NormalizarCPF = Table.TransformColumns( TiparColuna, { { "CPF", each Text.PadStart( Text.From(_), 11, "0" ), type text } } ),
+				                    AdicionarColuna = Table.AddColumn( NormalizarCPF, "MesAno", each Date.FromText( MesAno ), type date )
 				                in
 				                    AdicionarColuna,
 				            
@@ -162,9 +163,10 @@ table fact_Colaboradores
 				        [Tabelas],
 				
 				    // Unir todas as planilhas tratadas pela função
-				    CombinarTabelas = Table.Combine( ListaTabelas )
+				    CombinarTabelas = Table.Combine( ListaTabelas ),
+				    UpperCaseColaboradores = Table.TransformColumns(CombinarTabelas,{{"COLABORADORES", Text.Upper, type text}})
 				in
-				    CombinarTabelas
+				    UpperCaseColaboradores
 				```
 
 	annotation PBI_NavigationStepName = Navigation

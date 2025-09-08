@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "89dfd0915ba0ba246ac0",
   "position": {
-    "x": 552.97450424929184,
-    "y": 143.22946175637395,
-    "z": 7000,
-    "height": 63.456090651558078,
-    "width": 203.05949008498584,
-    "tabOrder": 6000
+    "x": 718.54796888504745,
+    "y": 142.71391529818496,
+    "z": 6000,
+    "height": 64.7191011235955,
+    "width": 160.96802074330162,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "slicer",
@@ -102,49 +102,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "f",
-                    "Entity": "fact_Colaboradores",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "f"
-                                }
-                              },
-                              "Property": "TIME"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'VD'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },

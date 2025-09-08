@@ -4,10 +4,10 @@
   "position": {
     "x": 1147.6923076923076,
     "y": 881.53846153846155,
-    "z": 18,
+    "z": 18000,
     "height": 77.6923076923077,
     "width": 199.23076923076923,
-    "tabOrder": 18
+    "tabOrder": 17000
   },
   "visual": {
     "visualType": "card",
@@ -105,20 +105,6 @@
   },
   "filterConfig": {
     "filters": [
-      {
-        "name": "ef3e23715ef6e608cd32",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Medidas"
-              }
-            },
-            "Property": "Qtd Funcionarios"
-          }
-        },
-        "type": "Advanced"
-      },
       {
         "name": "5922078a0ca96e57eaad",
         "field": {

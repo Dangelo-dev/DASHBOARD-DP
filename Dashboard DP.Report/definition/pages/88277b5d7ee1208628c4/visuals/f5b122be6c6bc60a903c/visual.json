@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "d579afa865428500070c",
+  "name": "f5b122be6c6bc60a903c",
   "position": {
-    "x": 902.74848746758846,
+    "x": 167.60587726879859,
     "y": 142.71391529818496,
-    "z": 7000,
+    "z": 12001,
     "height": 64.7191011235955,
-    "width": 277.13050993949867,
-    "tabOrder": 6000
+    "width": 159.30855661192737,
+    "tabOrder": 12001
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_Colaboradores"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "SETOR-DEPARTAMENTO "
+                  "Property": "MesAno"
                 }
               },
-              "queryRef": "fact_Colaboradores.SETOR-DEPARTAMENTO ",
-              "nativeQueryRef": "SETOR-DEPARTAMENTO ",
+              "queryRef": "dim_Calendario.MesAno",
+              "nativeQueryRef": "MesAno",
               "active": true
             }
           ]
@@ -102,7 +102,49 @@
       ],
       "general": [
         {
-          "properties": {}
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "d",
+                    "Entity": "dim_Calendario",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "d"
+                                }
+                              },
+                              "Property": "MesAno"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'set/2025'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         }
       ]
     },
@@ -126,54 +168,61 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d1d0ffce1c2970da3a24",
+        "name": "38eda244f54a0f15a368",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "fact_Colaboradores"
+                "Entity": "dim_Calendario"
               }
             },
-            "Property": "DIRETORIA"
+            "Property": "MesAno"
           }
         },
-        "type": "Categorical",
+        "type": "Advanced"
+      },
+      {
+        "name": "467625cc8c1d58205249",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Filtro Data Colaboradores"
+          }
+        },
+        "type": "Advanced",
         "filter": {
           "Version": 2,
           "From": [
             {
-              "Name": "l",
-              "Entity": "fact_Colaboradores",
+              "Name": "m",
+              "Entity": "Medidas",
               "Type": 0
             }
           ],
           "Where": [
             {
               "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "DIRETORIA"
-                          }
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
                         }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
+                      },
+                      "Property": "Filtro Data Colaboradores"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
                     }
                   }
                 }
@@ -181,23 +230,9 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

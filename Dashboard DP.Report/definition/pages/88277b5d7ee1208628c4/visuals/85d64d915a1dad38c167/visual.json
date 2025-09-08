@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "85d64d915a1dad38c167",
   "position": {
-    "x": 333.59773371104819,
-    "y": 143.22946175637395,
+    "x": 492.86084701815037,
+    "y": 142.71391529818496,
     "z": 2000,
-    "height": 63.456090651558078,
-    "width": 197.62039660056658,
-    "tabOrder": 1000
+    "height": 64.7191011235955,
+    "width": 204.11408815903195
   },
   "visual": {
     "visualType": "slicer",
@@ -102,49 +101,7 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "f",
-                    "Entity": "fact_Colaboradores",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "f"
-                                }
-                              },
-                              "Property": "DIRETORIA"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'COMERCIAL'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },

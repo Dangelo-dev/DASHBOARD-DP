@@ -7,7 +7,8 @@ table Medidas
 			    COUNT(fact_Colaboradores[COLABORADORES]),
 			    TREATAS(VALUES(aux_Diretoria[MesAno]), fact_Colaboradores[MesAno]),
 			    TREATAS(VALUES(aux_Diretoria[DIRETORIA]), fact_Colaboradores[DIRETORIA]),
-			    TREATAS(VALUES(aux_Time[TIME]), fact_Colaboradores[TIME])
+			    TREATAS(VALUES(aux_Time[TIME]), fact_Colaboradores[TIME]),
+			    TREATAS(VALUES(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]), fact_Colaboradores[SETOR-DEPARTAMENTO ])
 			)
 			
 			```
@@ -149,7 +150,7 @@ table Medidas
 			        COUNTROWS ( fact_Colaboradores ),
 			        FILTER (
 			            fact_Colaboradores,
-			            fact_Colaboradores[MesAno] = MAX ( dim_Calendario[Date] )
+			            fact_Colaboradores[MesAno] = STARTOFMONTH( dim_Calendario[Date] )
 			        )
 			    ) > 0,
 			    1,
@@ -157,6 +158,70 @@ table Medidas
 			)
 		formatString: 0
 		lineageTag: 004f2b75-65c3-412c-a9f8-f65fd029889e
+
+	measure 'Totalizador SetorDepartamento' = ```
+			
+			VAR _Colaboradores = [Qtd Funcionarios]
+			VAR _Total =
+			IF(
+			    SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) = "TOTAL",
+			    CALCULATE( 
+			        COUNT( fact_Colaboradores[COLABORADORES] ),
+			        ALL( fact_Colaboradores )
+			    )
+			)
+			RETURN
+			    _Colaboradores + _Total
+			```
+		formatString: 0
+		lineageTag: d478a79d-d25c-48f7-9983-4d2d575af4c1
+
+	measure 'Eixo Ordinal Setor' = ```
+			
+			SWITCH(
+			    TRUE(), 
+			    SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) IN VALUES( fact_Colaboradores[SETOR-DEPARTAMENTO ] ),
+			    RANK(
+			        DENSE,
+			        ALL(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]),
+			        ORDERBY([Qtd Funcionarios], ASC)
+			    ) +9
+			)
+			```
+		formatString: 0
+		lineageTag: 92479e36-2721-4a7b-a969-a3c23453f093
+
+	measure 'Eixo Y Setor' = ```
+			
+			VAR _Tabela = ALLSELECTED( aux_SetorDepartamento[MesAno], aux_SetorDepartamento[SETOR-DEPARTAMENTO ] )
+			VAR _MaiorValor = MAXX( _Tabela, [Totalizador SetorDepartamento] )
+			VAR _Deslocamento = 1.6
+			RETURN
+			
+			_MaiorValor * _Deslocamento 
+			```
+		lineageTag: 34bbe294-27d1-44bb-b478-9fa1372d8521
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Pct Colaboradores Setor' = ```
+			
+			VAR _Qtd = [Qtd Funcionarios]
+			VAR _Total =
+			    CALCULATE(
+			        COUNT(fact_Colaboradores[COLABORADORES]),
+			        ALL(fact_Colaboradores[SETOR-DEPARTAMENTO ])
+			    )
+			RETURN
+			    IF(
+			        SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) = "TOTAL",
+			        1,                                   -- 100%
+			        DIVIDE(_Qtd, _Total)
+			    )
+			
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: bc026dbd-1991-4511-b4e4-46362247752e
 
 	column Column
 		isHidden
