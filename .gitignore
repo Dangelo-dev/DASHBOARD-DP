@@ -2,3 +2,5 @@
 **/.pbi/cache.abf
 fact_Colaboradores/
 dim_Lojas.xlsx
+fact_BancoHoras/
+Background/
