@@ -142,6 +142,22 @@ table Medidas
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: c5b56528-9117-4b1a-92a4-baa8730f850b
 
+	measure 'Filtro Data Colaboradores' =
+			
+			IF (
+			    CALCULATE (
+			        COUNTROWS ( fact_Colaboradores ),
+			        FILTER (
+			            fact_Colaboradores,
+			            fact_Colaboradores[MesAno] = MAX ( dim_Calendario[Date] )
+			        )
+			    ) > 0,
+			    1,
+			    0
+			)
+		formatString: 0
+		lineageTag: 004f2b75-65c3-412c-a9f8-f65fd029889e
+
 	column Column
 		isHidden
 		formatString: 0

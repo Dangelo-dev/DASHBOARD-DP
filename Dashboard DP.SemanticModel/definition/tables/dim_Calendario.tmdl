@@ -12,6 +12,22 @@ table dim_Calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column MesAno = FORMAT( dim_Calendario[Date], "mmm/yyyy" )
+		lineageTag: acd8411d-8139-4897-9316-d8e8e5ec69d9
+		summarizeBy: none
+		sortByColumn: NumeroMesAno
+
+		annotation SummarizationSetBy = Automatic
+
+	column NumeroMesAno =
+			
+			YEAR(dim_Calendario[Date]) * 100 + MONTH(dim_Calendario[Date])
+		formatString: 0
+		lineageTag: 7c2d717a-4417-4524-82b4-5f75603c288b
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_Calendario = calculated
 		mode: import
 		source =

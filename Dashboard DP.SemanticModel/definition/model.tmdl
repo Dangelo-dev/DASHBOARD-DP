@@ -6,11 +6,16 @@ model Model
 		legacyRedirects
 		returnErrorValuesAsNull
 
+/// Errors in queries that were loaded on 08/09/2025 09:39:58.
+queryGroup 'Query Errors - 08/09/2025 09:39:58'
+
+	annotation PBI_QueryGroupOrder = 0
+
 annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.146.1254.0 (25.08)+791a7518fadc83da883d79322a2658aff57c8db3
 
-annotation PBI_QueryOrder = ["PastaLocal","fact_Colaboradores","fxColaboradores","dim_Lojas"]
+annotation PBI_QueryOrder = ["PastaLocal","dim_Lojas","fact_Colaboradores","fact_BancoHoras","Errors in fact_BancoHoras"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -20,6 +25,7 @@ ref table Medidas
 ref table dim_Lojas
 ref table aux_Diretoria
 ref table aux_Time
+ref table fact_BancoHoras
 
 ref cultureInfo pt-BR
 

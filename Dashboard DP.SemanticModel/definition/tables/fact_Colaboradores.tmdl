@@ -79,6 +79,14 @@ table fact_Colaboradores
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column CPF
+		dataType: string
+		lineageTag: c7400fd0-f7e5-4b91-ba8b-4cb26823cd22
+		summarizeBy: none
+		sourceColumn: CPF
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_Colaboradores = m
 		mode: import
 		source = ```
@@ -90,17 +98,70 @@ table fact_Colaboradores
 				
 				    ColunasSelecionadas = FiltrarArquivos[ [Content], [Name] ],
 				
+				    // Função que trata cada aba da mesma tabela e unifica as informações
+				    fxColaboradores = 
+				        ( arquivo as binary, MesAno as text ) as table =>
+				        let
+				            Source = Excel.Workbook( arquivo, true ), // Carrega cada arquivo de forma individual
+				            AbaUDI = Source{6}[Data], // Responsavel por carregar as informações de UDI
+				            AbaBH = Source{4}[Data], // Responsavel por carregar as informações de BH
+				
+				            ColunasNecessarias = { 
+				                "DATA DE ADMISSÃO", // Em teste ainda. Será necessária ?
+				                "COLABORADORES", // Responsavel por exibir o nome
+				                "CPF", // Relacionar com a dim_Colaboradores
+				                "CARGO", // Cargo exercido pelo colaborador
+				                "UNIDADE", // Unidade a que pertence. Necessária ? Tenho a informação na dim_Lojas
+				                "DIRETORIA", // Necessária
+				                "TIME", // Necessária
+				                "SETOR-DEPARTAMENTO ", // Necessária
+				                "CENTRO DE CUSTO" }, // Necessária
+				
+				            // Tipagem centralizada dos dados
+				            DefinirTipagem =  {
+				                    {"COLABORADORES", type text}, 
+				                    {"DATA DE ADMISSÃO", type date}, 
+				                    {"CPF", type text},
+				                    {"CARGO", type text}, 
+				                    {"TIME", type text}, 
+				                    {"DIRETORIA", type text}, 
+				                    {"SETOR-DEPARTAMENTO ", type text}, 
+				                    {"UNIDADE", type text}, 
+				                    {"CENTRO DE CUSTO", type text}
+				                },
+				
+				            // Função para tratar qualquer aba
+				            fxTratarTabela = 
+				                ( tabela as table, MesAno as text ) as table =>
+				                let
+				                    SelecionarColunas = Table.SelectColumns( tabela, ColunasNecessarias ),
+				                    TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
+				                    AdicionarColuna = Table.AddColumn( TiparColuna, "MesAno", each Date.FromText( MesAno ), type date )
+				                in
+				                    AdicionarColuna,
+				            
+				            TabelaTratadaUDI = fxTratarTabela( AbaUDI, MesAno ), // UDI com as etapas de definir tipagem e selecionar colunas
+				            TabelaTratadaBH = fxTratarTabela( AbaBH, MesAno ), // BH com as etapas de definir tipagem e selecionar colunas
+				            
+				            // União das duas unidades em uma única tabela
+				            UnirTabelasTratadas = Table.Combine( { TabelaTratadaUDI, TabelaTratadaBH } )
+				        in
+				            UnirTabelasTratadas,
+				
+				    
+				    // Responsavel por chamar a função em cada planilha
 				    ListaTabelas = Table.AddColumn(
 				        ColunasSelecionadas,
 				            "Tabelas", each 
 				                fxColaboradores( 
-				                    [Content],
-				                    Text.BetweenDelimiters( [Name], " ", ".xls" )
+				                    [Content], // Carrega todo conteudo
+				                    Text.BetweenDelimiters( [Name], " ", ".xls" ) // Adiciona a informação de MesAno
 				                ), 
 				            type table 
 				        )
 				        [Tabelas],
 				
+				    // Unir todas as planilhas tratadas pela função
 				    CombinarTabelas = Table.Combine( ListaTabelas )
 				in
 				    CombinarTabelas

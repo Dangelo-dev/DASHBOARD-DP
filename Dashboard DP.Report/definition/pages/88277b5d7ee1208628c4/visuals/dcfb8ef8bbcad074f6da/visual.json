@@ -36,22 +36,17 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "fact_Colaboradores"
-                        }
-                      },
-                      "Property": "COLABORADORES"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Qtd Funcionarios"
                 }
               },
-              "queryRef": "CountNonNull(Lista de Colaboradores UDI.COLABORADORES)",
-              "nativeQueryRef": "COLABORADORES"
+              "queryRef": "Medidas.Qtd Funcionarios",
+              "nativeQueryRef": "Qtd Funcionarios"
             }
           ]
         }
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "fact_Colaboradores"
-                      }
-                    },
-                    "Property": "COLABORADORES"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Qtd Funcionarios"
               }
             },
             "direction": "Descending"
@@ -260,7 +250,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e3e50734f48376d6f460",
+        "name": "ece7cd2afeab290e6d12",
         "field": {
           "Column": {
             "Expression": {
@@ -268,69 +258,10 @@
                 "Entity": "fact_Colaboradores"
               }
             },
-            "Property": "DIRETORIA"
+            "Property": "UNIDADE"
           }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "l",
-              "Entity": "fact_Colaboradores",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "l"
-                              }
-                            },
-                            "Property": "DIRETORIA"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "type": "Categorical"
       }
     ]
   }

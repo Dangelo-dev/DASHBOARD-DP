@@ -1,0 +1,118 @@
+table fact_BancoHoras
+	lineageTag: e88ac8a5-a991-4373-9ed2-e600c7d3f32e
+
+	column CPF
+		dataType: string
+		lineageTag: 133f3297-a6ed-4032-8a99-8ce9129ae790
+		summarizeBy: none
+		sourceColumn: CPF
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Data Saldo'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f1e2c833-b358-4f9a-a8bb-57534842ed6f
+		summarizeBy: none
+		sourceColumn: Data Saldo
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Saldo Minutos'
+		dataType: double
+		lineageTag: d71d15c4-333b-4043-949f-a2ee66d98617
+		summarizeBy: sum
+		sourceColumn: Saldo Minutos
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition fact_BancoHoras = m
+		mode: import
+		source = ```
+				let
+				    Source = Folder.Contents( PastaLocal )
+				    {[Name="fact_BancoHoras"]}[Content],
+				
+				    FiltrarArquivos = Table.SelectRows( Source, each Text.EndsWith( [Name], ".xlsx" ) ),
+				
+				    ColunasSelecionadas = FiltrarArquivos[ [Content], [Name] ],
+				
+				    // Função para tratar todo Banco de Horas
+				    fxBancoHoras = 
+				        ( arquivo as binary ) as table =>
+				        let
+				            // Carregar arquivo excel e promover cabecalhos
+				            excel = Excel.Workbook( arquivo, true ){0}[Data],
+				            
+				            // Define a coluna de Data como date
+				            DefinirTipagem = Table.TransformColumnTypes( excel, {"Data Saldo", type date } ),
+				
+				            // Função para converter as horas em minutos ( tratando horas negativas )
+				            fxSaldoAcumulado = 
+				                (SaldoTxt as text) as nullable number =>
+				                let
+				                    Limpar = Text.Trim( SaldoTxt ),
+				                    TemDoisPontos = Text.Contains( Limpar, ":" ),
+				                    EhNegativo = Text.StartsWith( Limpar, "-" ),
+				
+				                    // tira o sinal pra tratar separado
+				                    TextoSemSinal = if EhNegativo then Text.Middle( Limpar, 1 ) else Limpar,
+				
+				                    Resultado = 
+				                        if TemDoisPontos then
+				                            let
+				                                Partes = Text.Split( TextoSemSinal, ":" ),
+				                                Horas = Number.FromText( Partes{0} ),
+				                                Minutos = Number.FromText( Partes{1} ),
+				                                TotalMin = Horas * 60 + Minutos,
+				                                Ajuste = if EhNegativo then -TotalMin else TotalMin
+				                            in
+				                                Ajuste
+				                        else
+				                            // decimal → multiplica por 60
+				                            try Number.FromText( Limpar ) * 60 otherwise null
+				                in
+				                    Resultado,
+				            
+				            // Adiciona a coluna nova tratada pela função
+				            AdicionarMinutos = Table.AddColumn (
+				                DefinirTipagem, 
+				                "Saldo Minutos", 
+				                each fxSaldoAcumulado( [Saldo Acumulado] ),
+				                type number
+				            ),
+				            
+				            ColunasNecessarias = { 
+				                "CPF", // Relacionar com a dim_Colaboradores
+				                "Data Saldo", // Mensurar periodo e relacionar com a dim_Calendario
+				                "Saldo Minutos" }, // Informação convertida para minutos
+				
+				            // Seleciona somente as colunas necessárias conforme descrição na 'ColunasNecessarias'
+				            SelecionarColunas = Table.SelectColumns( AdicionarMinutos, ColunasNecessarias )
+				        in
+				            SelecionarColunas,
+				    
+				    // Adiciona uma nova coluna para chamar a função que trata todas planilhas e unifica as unidades
+				    ListaTabelas = Table.AddColumn(
+				        ColunasSelecionadas,
+				            "Tabelas", each 
+				                fxBancoHoras( 
+				                    [Content]
+				                ), 
+				            type table 
+				        )
+				        [Tabelas],
+				
+				    CombinarTabelas = Table.Combine( ListaTabelas )
+				in
+				    CombinarTabelas
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

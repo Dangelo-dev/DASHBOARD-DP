@@ -5,48 +5,26 @@ expression PastaLocal = "T:\12-TI\DASHBOARD\DASHBOARD DP" meta [IsParameterQuery
 
 	annotation PBI_ResultType = Text
 
-expression fxColaboradores = ```
-		( arquivo as binary, MesAno as text ) as table =>
+expression 'Errors in fact_BancoHoras' =
 		let
-		    Source = Excel.Workbook( arquivo, true ), // Carrega cada arquivo de forma individual
-		    AbaUDI = Source{6}[Data], // Responsavel por carregar as informações de UDI
-		    AbaBH = Source{4}[Data], // Responsavel por carregar as informações de BH
-		
-		    ColunasNecessarias = { "COLABORADORES", "DATA DE ADMISSÃO", "CARGO", "TIME", "DIRETORIA", "SETOR-DEPARTAMENTO ", "UNIDADE", "CENTRO DE CUSTO"}, // Adicionar somente aqui caso haja mais colunas necessárias futuramente
-		
-		    // Tipagem centralizada dos dados
-		    DefinirTipagem =  {
-		            {"COLABORADORES", type text}, 
-		            {"DATA DE ADMISSÃO", type date}, 
-		            {"CARGO", type text}, 
-		            {"TIME", type text}, 
-		            {"DIRETORIA", type text}, 
-		            {"SETOR-DEPARTAMENTO ", type text}, 
-		            {"UNIDADE", type text}, 
-		            {"CENTRO DE CUSTO", type text}
-		        },
-		
-		    // Função para tratar qualquer aba
-		    fxTratarTabela = 
-		        ( tabela as table, MesAno as text ) as table =>
-		        let
-		            SelecionarColunas = Table.SelectColumns( tabela, ColunasNecessarias ),
-		            TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
-		            AdicionarColuna = Table.AddColumn( TiparColuna, "MesAno", each Date.FromText( MesAno ), type date )
-		        in
-		            AdicionarColuna,
-		    
-		    TabelaTratadaUDI = fxTratarTabela( AbaUDI, MesAno ), // UDI com as etapas de definir tipagem e selecionar colunas
-		    TabelaTratadaBH = fxTratarTabela( AbaBH, MesAno ), // BH com as etapas de definir tipagem e selecionar colunas
-		    
-		    // União das duas unidades em uma única tabela
-		    UnirTabelasTratadas = Table.Combine( { TabelaTratadaUDI, TabelaTratadaBH } )
+		Source = fact_BancoHoras,
+		  #"Detected Type Mismatches" = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Source, Table.ColumnsOfType(Source, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "The type of the value does not match the type of the column.", Detail = v], fieldTypes{i}})
 		in
-		    UnirTabelasTratadas
-		```
-	lineageTag: 882c4b79-56a7-4d4a-b3f0-805bc844bfeb
+		    Table.TransformColumns(Source, pairs),
+		  #"Added Index" = Table.AddIndexColumn(#"Detected Type Mismatches", "Row Number" ,1),
+		  #"Kept Errors" = Table.SelectRowsWithErrors(#"Added Index", {"CPF", "Data Saldo", "Saldo Minutos"}),
+		  #"Reordered Columns" = Table.ReorderColumns(#"Kept Errors", {"Row Number", "CPF", "Data Saldo", "Saldo Minutos"})
+		in
+		  #"Reordered Columns"
+	lineageTag: e4513b2f-deb7-4c38-927d-59854a41c6ac
+	queryGroup: 'Query Errors - 08/09/2025 09:39:58'
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Function
+	annotation PBI_ResultType = Table
 
