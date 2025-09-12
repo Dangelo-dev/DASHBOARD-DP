@@ -223,6 +223,66 @@ table Medidas
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: bc026dbd-1991-4511-b4e4-46362247752e
 
+	measure SaldoHoras =
+			
+			VAR TotalMinutos = SUM( fact_BancoHoras[Saldo Minutos] )
+			VAR Horas = QUOTIENT( TotalMinutos, 60 )
+			VAR Minutos = TotalMinutos - ( Horas * 60 )
+			VAR Resultado =
+			    Horas * 100
+			    + ABS( Minutos ) * SIGN( TotalMinutos )
+			RETURN
+			Resultado
+		formatString: 00:00
+		lineageTag: 1a85dd09-5b3e-4619-9e69-eba5a98e3cfc
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'Grafico SaldoHoras' = ```
+			
+			VAR TotalMinutos = 
+			    CALCULATE( 
+			        SUM( fact_BancoHoras[Saldo Minutos] ),
+			        FILTER( 
+			            fact_BancoHoras, 
+			            fact_BancoHoras[Data Saldo] = 
+			            CALCULATE( 
+			                MAX(fact_BancoHoras[Data Saldo]),
+			                ALLEXCEPT( fact_BancoHoras, dim_Calendario[MesNome])
+			            )
+			        )
+			    )
+			VAR Horas = QUOTIENT( TotalMinutos, 60 )
+			VAR Minutos = TotalMinutos - ( Horas * 60 )
+			VAR Resultado =
+			    Horas * 100
+			    + ABS( Minutos ) * SIGN( TotalMinutos )
+			RETURN
+			Resultado
+			```
+		formatString: 00:00
+		lineageTag: e615ab18-eed2-414b-88b0-71cf2795a411
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure Teste = ```
+			
+			CALCULATE( 
+			    SUM( fact_BancoHoras[Saldo Minutos] ),
+			    fact_BancoHoras[Data Saldo] = MAX( dim_Calendario[Date] ) 
+			)
+			```
+		formatString: 0
+		lineageTag: 808030bf-5399-4e2f-a57b-1465f71d8532
+
+	measure 'Titulo Dinamico Grafico HE' =
+			
+			VAR _SelecaoEixo = SELECTEDVALUE(aux_SlicerHE[NomeCampo])
+			VAR _Texto = "Distribuição de HE por "
+			RETURN
+			_Texto & _SelecaoEixo
+		lineageTag: aba58217-0978-4a6a-9c20-9856a1f6e2a7
+
 	column Column
 		isHidden
 		formatString: 0

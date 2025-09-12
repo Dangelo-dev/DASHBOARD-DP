@@ -1,0 +1,260 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "4db14da7ac5ea5530624",
+  "position": {
+    "x": 461.0169491525424,
+    "y": 976.271186440678,
+    "z": 22000,
+    "height": 66.89265536723164,
+    "width": 180.79096045197741,
+    "tabOrder": 22000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Qtd Funcionarios"
+                }
+              },
+              "queryRef": "Medidas.Qtd Funcionarios",
+              "nativeQueryRef": "Qtd Funcionarios"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "Qtd Funcionarios"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.3
+                    }
+                  }
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.6
+                    }
+                  }
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "32D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f29a5340d39fe75ffbf7",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Qtd Funcionarios"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "02feecb62242e65bded4",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Colaboradores"
+              }
+            },
+            "Property": "DIRETORIA"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_Colaboradores",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "DIRETORIA"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'ADM-FIN'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "3e0ce44f2633e5728f05",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_Colaboradores"
+              }
+            },
+            "Property": "TIME"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_Colaboradores",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "f"
+                          }
+                        },
+                        "Property": "TIME"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'ADM'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

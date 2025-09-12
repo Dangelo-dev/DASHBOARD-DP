@@ -5,9 +5,9 @@
     "x": 24.239401496259351,
     "y": 100.99750623441396,
     "z": 0,
-    "height": 344.73815461346635,
+    "height": 350.12468827930178,
     "width": 96.9576059850374,
-    "tabOrder": 25000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -61,6 +61,22 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "fe70efb84e226619dee3"
           }
         }
       ]

@@ -1,0 +1,300 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "58a9da73f613c471e8cf",
+  "position": {
+    "x": 165.6359102244389,
+    "y": 137.356608478803,
+    "z": 1000,
+    "height": 64.638403990024941,
+    "width": 230.27431421446386
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_BancoHoras"
+                    }
+                  },
+                  "Property": "Data Saldo"
+                }
+              },
+              "queryRef": "fact_BancoHoras.Data Saldo",
+              "nativeQueryRef": "Data Saldo",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_BancoHoras"
+                  }
+                },
+                "Property": "Data Saldo"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "f",
+                    "Entity": "fact_BancoHoras",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "f"
+                                }
+                              },
+                              "Property": "Data Saldo"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "datetime'2025-08-31T00:00:00'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "be9bd49f25d29e1f39ae",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_BancoHoras"
+              }
+            },
+            "Property": "Data Saldo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_BancoHoras",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "f"
+                              }
+                            },
+                            "Property": "Data Saldo"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

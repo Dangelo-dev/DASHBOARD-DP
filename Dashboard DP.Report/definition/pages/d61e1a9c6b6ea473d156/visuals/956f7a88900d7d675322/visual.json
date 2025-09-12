@@ -2,12 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "956f7a88900d7d675322",
   "position": {
-    "x": 541.42857142857144,
-    "y": 245.71428571428572,
-    "z": 25000,
-    "height": 54.285714285714292,
-    "width": 145.71428571428572,
-    "tabOrder": 24000
+    "x": 630.63414634146341,
+    "y": 28.097560975609756,
+    "z": 1000,
+    "height": 59.31707317073171,
+    "width": 171.70731707317074
   },
   "visual": {
     "visualType": "slicer",
@@ -149,6 +148,24 @@
                   }
                 }
               }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "background": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#C5E0B4'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -221,20 +238,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "c6e61f6ba5085be5e6e0",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "dim_Calendario"
-              }
-            },
-            "Property": "MesAno"
-          }
-        },
-        "type": "Categorical"
       }
     ]
   }

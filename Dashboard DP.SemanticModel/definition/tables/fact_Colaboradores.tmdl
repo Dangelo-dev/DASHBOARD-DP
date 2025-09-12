@@ -9,17 +9,6 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'DATA DE ADMISSÃO'
-		dataType: dateTime
-		formatString: Short Date
-		lineageTag: 51b08a14-758c-4e11-8874-0190c8f8d784
-		summarizeBy: none
-		sourceColumn: DATA DE ADMISSÃO
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column CARGO
 		dataType: string
 		lineageTag: 7fca0c80-c98f-49b8-9aa7-51207eb9755d
@@ -102,12 +91,13 @@ table fact_Colaboradores
 				    fxColaboradores = 
 				        ( arquivo as binary, MesAno as text ) as table =>
 				        let
-				            Source = Excel.Workbook( arquivo, true ), // Carrega cada arquivo de forma individual
-				            AbaUDI = Source{6}[Data], // Responsavel por carregar as informações de UDI
-				            AbaBH = Source{4}[Data], // Responsavel por carregar as informações de BH
+				            Source = Excel.Workbook ( arquivo, true ),
+				            AbaDesejada = Table.SelectRows( Source, each [Name] = "LISTA DE COLABORADORES" ),
+				            Dados = AbaDesejada{0}[Data],
+				            Promover = Table.PromoteHeaders( Dados, [PromoteAllScalars = true] ),
+				            FiltrarNulos = Table.SelectRows( Promover, each ( [COLABORADORES] <> null ) ),
 				
 				            ColunasNecessarias = { 
-				                "DATA DE ADMISSÃO", // Em teste ainda. Será necessária ?
 				                "COLABORADORES", // Responsavel por exibir o nome
 				                "CPF", // Relacionar com a dim_Colaboradores
 				                "CARGO", // Cargo exercido pelo colaborador
@@ -119,35 +109,24 @@ table fact_Colaboradores
 				
 				            // Tipagem centralizada dos dados
 				            DefinirTipagem =  {
-				                    {"COLABORADORES", type text}, 
-				                    {"DATA DE ADMISSÃO", type date}, 
+				                    {"COLABORADORES", type text},
 				                    {"CPF", type text},
 				                    {"CARGO", type text}, 
+				                    {"DIRETORIA", type text},
 				                    {"TIME", type text}, 
-				                    {"DIRETORIA", type text}, 
 				                    {"SETOR-DEPARTAMENTO ", type text}, 
 				                    {"UNIDADE", type text}, 
 				                    {"CENTRO DE CUSTO", type text}
 				                },
-				
-				            // Função para tratar qualquer aba
-				            fxTratarTabela = 
-				                ( tabela as table, MesAno as text ) as table =>
-				                let
-				                    SelecionarColunas = Table.SelectColumns( tabela, ColunasNecessarias ),
-				                    TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
-				                    NormalizarCPF = Table.TransformColumns( TiparColuna, { { "CPF", each Text.PadStart( Text.From(_), 11, "0" ), type text } } ),
-				                    AdicionarColuna = Table.AddColumn( NormalizarCPF, "MesAno", each Date.FromText( MesAno ), type date )
-				                in
-				                    AdicionarColuna,
+				            SelecionarColunas = Table.SelectColumns( FiltrarNulos, ColunasNecessarias ),
 				            
-				            TabelaTratadaUDI = fxTratarTabela( AbaUDI, MesAno ), // UDI com as etapas de definir tipagem e selecionar colunas
-				            TabelaTratadaBH = fxTratarTabela( AbaBH, MesAno ), // BH com as etapas de definir tipagem e selecionar colunas
+				            TiparColuna = Table.TransformColumnTypes( SelecionarColunas, DefinirTipagem ),
 				            
-				            // União das duas unidades em uma única tabela
-				            UnirTabelasTratadas = Table.Combine( { TabelaTratadaUDI, TabelaTratadaBH } )
+				            NormalizarCPF = Table.TransformColumns( TiparColuna, { { "CPF", each Text.PadStart( Text.From(_), 11, "0" ), type text } } ),
+				            
+				            AdicionarColuna = Table.AddColumn( NormalizarCPF, "MesAno", each Date.FromText( Text.BetweenDelimiters( MesAno, " ", ".xls" ) ), type date )
 				        in
-				            UnirTabelasTratadas,
+				            AdicionarColuna,
 				
 				    
 				    // Responsavel por chamar a função em cada planilha
@@ -156,17 +135,16 @@ table fact_Colaboradores
 				            "Tabelas", each 
 				                fxColaboradores( 
 				                    [Content], // Carrega todo conteudo
-				                    Text.BetweenDelimiters( [Name], " ", ".xls" ) // Adiciona a informação de MesAno
+				                    [Name] // Adiciona a informação de MesAno
 				                ), 
 				            type table 
 				        )
 				        [Tabelas],
 				
 				    // Unir todas as planilhas tratadas pela função
-				    CombinarTabelas = Table.Combine( ListaTabelas ),
-				    UpperCaseColaboradores = Table.TransformColumns(CombinarTabelas,{{"COLABORADORES", Text.Upper, type text}})
+				    CombinarTabelas = Table.Combine( ListaTabelas )
 				in
-				    UpperCaseColaboradores
+				    CombinarTabelas
 				```
 
 	annotation PBI_NavigationStepName = Navigation

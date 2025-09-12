@@ -3,10 +3,10 @@
   "name": "44c4b69cf2321cb03dd4",
   "position": {
     "x": 4.0806045340050376,
-    "y": 35.365239294710328,
+    "y": 130.5793450881612,
     "z": 0,
-    "height": 1044.6347607052896,
-    "width": 1413.249370277078
+    "height": 949.42065491183882,
+    "width": 1530.2267002518893
   },
   "visual": {
     "visualType": "tableEx",
@@ -111,40 +111,9 @@
               },
               "queryRef": "fact_Colaboradores.CENTRO DE CUSTO",
               "nativeQueryRef": "CENTRO DE CUSTO"
-            },
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "fact_BancoHoras"
-                    }
-                  },
-                  "Property": "Saldo Acumulado"
-                }
-              },
-              "queryRef": "fact_BancoHoras.Saldo Acumulado",
-              "nativeQueryRef": "Saldo Acumulado"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "fact_Colaboradores"
-                  }
-                },
-                "Property": "COLABORADORES"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ]
       }
     },
     "objects": {
@@ -168,13 +137,41 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "260.251968503937D"
+                  "Value": "294.22434138786116D"
                 }
               }
             }
           },
           "selector": {
             "metadata": "fact_Colaboradores.CARGO"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "110.37031037387416D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_Colaboradores.TIME"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "122.80606492580833D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "fact_Colaboradores.DIRETORIA"
           }
         }
       ]

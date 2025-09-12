@@ -1,0 +1,421 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "39e91880260990d1496c",
+  "position": {
+    "x": 146.95960311835577,
+    "y": 547.01630049610208,
+    "z": 0,
+    "height": 483.06165839829907,
+    "width": 1725.4145995747697,
+    "tabOrder": 9000
+  },
+  "visual": {
+    "visualType": "clusteredColumnChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dim_Lojas"
+                    }
+                  },
+                  "Property": "NOME LOJA"
+                }
+              },
+              "queryRef": "dim_Lojas.NOME LOJA",
+              "nativeQueryRef": "Centro de Custo",
+              "active": true,
+              "displayName": "Centro de Custo"
+            }
+          ],
+          "fieldParameters": [
+            {
+              "parameterExpr": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "aux_SlicerHE"
+                    }
+                  },
+                  "Property": "aux_SlicerHE"
+                }
+              },
+              "index": 0,
+              "length": 1
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "SaldoHoras"
+                }
+              },
+              "queryRef": "Medidas.SaldoHoras",
+              "nativeQueryRef": "SaldoHoras"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
+                "Property": "SaldoHoras"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "SaldoHoras"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#007A0A'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 2,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "Medidas"
+                                    }
+                                  },
+                                  "Property": "SaldoHoras"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "1D"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#FF0000'"
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "labelPrecision": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "25L"
+                }
+              }
+            },
+            "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showAxisTitle": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "zoom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Titulo Dinamico Grafico HE"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "17D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

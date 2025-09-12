@@ -11,7 +11,7 @@ table fact_BancoHoras
 
 	column 'Data Saldo'
 		dataType: dateTime
-		formatString: Long Date
+		formatString: Short Date
 		lineageTag: f1e2c833-b358-4f9a-a8bb-57534842ed6f
 		summarizeBy: none
 		sourceColumn: Data Saldo

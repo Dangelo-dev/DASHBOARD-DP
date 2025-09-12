@@ -1,0 +1,87 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "07e580b73b975f9edbfd",
+  "position": {
+    "x": 24.239401496259351,
+    "y": 100.99750623441396,
+    "z": 13000,
+    "height": 350.12468827930178,
+    "width": 96.9576059850374,
+    "tabOrder": 12000
+  },
+  "visual": {
+    "visualType": "pageNavigator",
+    "objects": {
+      "layout": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "text": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "outline": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "fill": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showPage": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "fe70efb84e226619dee3"
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "howCreated": "InsertVisualButton"
+}

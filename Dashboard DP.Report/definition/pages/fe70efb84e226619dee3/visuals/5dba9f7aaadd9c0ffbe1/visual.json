@@ -1,0 +1,201 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "5dba9f7aaadd9c0ffbe1",
+  "position": {
+    "x": 0,
+    "y": 0,
+    "z": 1000,
+    "height": 130.5793450881612,
+    "width": 126.49874055415617
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_BancoHoras"
+                    }
+                  },
+                  "Property": "Data Saldo"
+                }
+              },
+              "queryRef": "fact_BancoHoras.Data Saldo",
+              "nativeQueryRef": "Data Saldo",
+              "active": true
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_BancoHoras"
+                  }
+                },
+                "Property": "Data Saldo"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Basic'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "orientation": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "f",
+                    "Entity": "fact_BancoHoras",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "f"
+                                }
+                              },
+                              "Property": "Data Saldo"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "datetime'2025-08-31T00:00:00'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "668eed8b77f43e10e8fc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_BancoHoras"
+              }
+            },
+            "Property": "Data Saldo"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_BancoHoras",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "f"
+                              }
+                            },
+                            "Property": "Data Saldo"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

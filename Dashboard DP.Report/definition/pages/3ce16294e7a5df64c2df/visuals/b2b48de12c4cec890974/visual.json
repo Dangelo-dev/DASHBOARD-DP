@@ -1,0 +1,242 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "name": "b2b48de12c4cec890974",
+  "position": {
+    "x": 1388.3790523690773,
+    "y": 140.04987531172071,
+    "z": 7000,
+    "height": 61.945137157107233,
+    "width": 286.83291770573567,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "slicer",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "CENTRO DE CUSTO"
+                }
+              },
+              "queryRef": "fact_Colaboradores.CENTRO DE CUSTO",
+              "nativeQueryRef": "CENTRO DE CUSTO",
+              "active": true
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "data": [
+        {
+          "properties": {
+            "mode": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Dropdown'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "selection": [
+        {
+          "properties": {
+            "strictSingleSelect": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "header": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "items": [
+        {
+          "properties": {
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de92073cd04022c98c08",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Lojas"
+              }
+            },
+            "Property": "NOME LOJA"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "d",
+              "Entity": "dim_Lojas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "d"
+                              }
+                            },
+                            "Property": "NOME LOJA"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

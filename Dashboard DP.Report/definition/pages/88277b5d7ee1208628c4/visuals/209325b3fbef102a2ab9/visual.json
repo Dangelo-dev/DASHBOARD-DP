@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "209325b3fbef102a2ab9",
   "position": {
-    "x": 167.60587726879859,
-    "y": 288.74675885911836,
-    "z": 9000,
-    "height": 413.20656871218665,
-    "width": 384.99567847882452,
-    "tabOrder": 7000
+    "x": 166.98254364089775,
+    "y": 288.17955112219454,
+    "z": 8000,
+    "height": 413.41645885286783,
+    "width": 568.279301745636,
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "tableEx",
@@ -43,6 +43,20 @@
               },
               "queryRef": "fact_Colaboradores.COLABORADORES",
               "nativeQueryRef": "COLABORADORES"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "CARGO"
+                }
+              },
+              "queryRef": "fact_Colaboradores.CARGO",
+              "nativeQueryRef": "CARGO"
             }
           ]
         }

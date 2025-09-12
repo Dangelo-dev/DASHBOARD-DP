@@ -69,99 +69,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_colaboradore.data_de_admissão": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fact_Colaboradores",
-			          "ConceptualProperty": "DATA DE ADMISSÃO"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "data de admissão": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        },
-			        {
-			          "information de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "fact de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "info de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "statistic de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
-			          }
-			        },
-			        {
-			          "document de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "figure de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "record de admissão": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "fact_colaboradore.cargo": {
 			      "Definition": {
 			        "Binding": {
@@ -1135,7 +1042,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.eixo_x_setor": {
+			    "medida.eixo_y_setor": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
@@ -1145,7 +1052,7 @@ cultureInfo pt-BR
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "eixo x setor": {
+			          "eixo y setor": {
 			            "State": "Generated"
 			          }
 			        }
@@ -1217,6 +1124,16 @@ cultureInfo pt-BR
 			        {
 			          "nome loja": {
 			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Centro de Custo": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -1672,16 +1589,6 @@ cultureInfo pt-BR
 			          "saldo acumulado": {
 			            "State": "Generated"
 			          }
-			        },
-			        {
-			          "Saldo Horas": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
-			          }
 			        }
 			      ]
 			    },
@@ -1768,637 +1675,344 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "medida.saldo_horas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "SaldoHoras"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "saldo horas": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "SaldoHoras": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SlicerHE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aux slicer HE": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_SlicerHE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "slicer HE": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE.aux_slicer_HE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualProperty": "aux_SlicerHE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "aux slicer HE": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux slicer HE name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_SlicerHE": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "slicer HE": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "VISÃO": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ],
+			      "NameType": "Name"
+			    },
+			    "aux_slicer_HE.aux_SlicerHE_field": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualProperty": "aux_SlicerHE Fields"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "aux_SlicerHE field": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_slicerhe arena": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aux_slicerhe turf": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe ground": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe pitch": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe park": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe meadow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "aux_slicerhe grassland": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "aux_slicerhe lea": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "aux_slicerhe pasture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "aux_slicerhe countryside": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE.aux_SlicerHE_order": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualProperty": "aux_SlicerHE Order"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "aux_SlicerHE order": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "aux_slicerhe instruction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aux_slicerhe direction": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aux_slicerhe edict": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aux_slicerhe command": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe directive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe demand": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe mandate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe imperative": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "aux_slicerhe stability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "aux_slicerhe harmony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "dim_loja_has_cod_loja": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Lojas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_loja": {
-			          "Target": {
-			            "Entity": "dim_loja"
-			          }
-			        },
-			        "dim_loja.cod_loja": {
-			          "Target": {
-			            "Entity": "dim_loja.cod_loja"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_loja"
-			            },
-			            "Object": {
-			              "Role": "dim_loja.cod_loja"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_loja_have_cod_loja"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_colaboradore": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.colaboradore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.colaboradore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_colaboradores"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_data_de_admissão": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.data_de_admissão": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.data_de_admissão"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.data_de_admissão"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_data_de_admissãos"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_cargo": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.cargo": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.cargo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.cargo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_cargoes"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_time": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.time": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_times"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.diretoria": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_diretorias"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_setordepartamento": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.setordepartamento": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.setordepartamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.setordepartamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_setordepartamentos"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_unidade": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.unidade": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.unidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.unidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_unidades"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.mes_ano": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_cpf": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "fact_colaboradore.cpf": {
-			          "Target": {
-			            "Entity": "fact_colaboradore.cpf"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore.cpf"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_cpfs"
-			        }
-			      ]
-			    },
-			    "dim_calendario_has_date": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario": {
-			          "Target": {
-			            "Entity": "dim_calendario"
-			          }
-			        },
-			        "dim_calendario.date": {
-			          "Target": {
-			            "Entity": "dim_calendario.date"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.date"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_dates"
-			        }
-			      ]
-			    },
-			    "dim_calendario_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario": {
-			          "Target": {
-			            "Entity": "dim_calendario"
-			          }
-			        },
-			        "dim_calendario.mes_ano": {
-			          "Target": {
-			            "Entity": "dim_calendario.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "dim_calendario_has_numero_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_calendario": {
-			          "Target": {
-			            "Entity": "dim_calendario"
-			          }
-			        },
-			        "dim_calendario.numero_mes_ano": {
-			          "Target": {
-			            "Entity": "dim_calendario.numero_mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_calendario"
-			            },
-			            "Object": {
-			              "Role": "dim_calendario.numero_mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_calendarios_have_numero_mes_anos"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_qtd_funcionarios": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.qtd_funcionarios": {
-			          "Target": {
-			            "Entity": "medida.qtd_funcionarios"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.qtd_funcionarios"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_qtd_funcionarios"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_medida_pct_colaboradores_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "medida.pct_colaboradores_diretoria": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_pct_colaboradores_diretoria"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_pct_colaboradores_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.pct_colaboradores_diretoria": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_pct_colaboradores_diretoria"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_medida_totalizador_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "medida.totalizador_diretoria": {
-			          "Target": {
-			            "Entity": "medida.totalizador_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_totalizador_diretoria"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_totalizador_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.totalizador_diretoria": {
-			          "Target": {
-			            "Entity": "medida.totalizador_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_totalizador_diretoria"
-			        }
-			      ]
-			    },
-			    "medida_has_eixo_ordinal_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medida": {
-			          "Target": {
-			            "Entity": "medida"
-			          }
-			        },
-			        "medida.eixo_ordinal_diretoria": {
-			          "Target": {
-			            "Entity": "medida.eixo_ordinal_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medida"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_ordinal_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_have_eixo_ordinal_diretoria"
-			        }
-			      ]
-			    },
-			    "aux_time_has_medida_totalizador_time": {
+			    "aux_time_has_fact_colaboradore": {
 			      "Binding": {
 			        "ConceptualEntity": "aux_Time"
 			      },
@@ -2409,9 +2023,9 @@ cultureInfo pt-BR
 			            "Entity": "aux_time"
 			          }
 			        },
-			        "medida.totalizador_time": {
+			        "fact_colaboradore": {
 			          "Target": {
-			            "Entity": "medida.totalizador_time"
+			            "Entity": "fact_colaboradore"
 			          }
 			        }
 			      },
@@ -2422,82 +2036,16 @@ cultureInfo pt-BR
 			              "Role": "aux_time"
 			            },
 			            "Object": {
-			              "Role": "medida.totalizador_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_totalizador_time"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_totalizador_time": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.totalizador_time": {
-			          "Target": {
-			            "Entity": "medida.totalizador_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
 			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_time"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_totalizador_time"
+			          "ID": "aux_times_have_fact_colaboradores"
 			        }
 			      ]
 			    },
-			    "medida_has_eixo_ordinal_time": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medida": {
-			          "Target": {
-			            "Entity": "medida"
-			          }
-			        },
-			        "medida.eixo_ordinal_time": {
-			          "Target": {
-			            "Entity": "medida.eixo_ordinal_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medida"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_ordinal_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_have_eixo_ordinal_time"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_medida_eixo_y_diretoria": {
+			    "aux_diretoria_has_fact_colaboradore": {
 			      "Binding": {
 			        "ConceptualEntity": "aux_Diretoria"
 			      },
@@ -2508,9 +2056,9 @@ cultureInfo pt-BR
 			            "Entity": "aux_diretoria"
 			          }
 			        },
-			        "medida.eixo_y_diretoria": {
+			        "fact_colaboradore": {
 			          "Target": {
-			            "Entity": "medida.eixo_y_diretoria"
+			            "Entity": "fact_colaboradore"
 			          }
 			        }
 			      },
@@ -2521,771 +2069,12 @@ cultureInfo pt-BR
 			              "Role": "aux_diretoria"
 			            },
 			            "Object": {
-			              "Role": "medida.eixo_y_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_eixo_y_diretoria"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_eixo_y_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.eixo_y_diretoria": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
 			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_diretoria"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_eixo_y_diretoria"
-			        }
-			      ]
-			    },
-			    "aux_time_has_medida_eixo_y_time": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "medida.eixo_y_time": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_eixo_y_time"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_eixo_y_time": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.eixo_y_time": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_eixo_y_time"
-			        }
-			      ]
-			    },
-			    "aux_time_has_medida_pct_colaboradores_time": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "medida.pct_colaboradores_time": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_pct_colaboradores_time"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_pct_colaboradores_time": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.pct_colaboradores_time": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_pct_colaboradores_time"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_filtro_data_colaboradores": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.filtro_data_colaboradores": {
-			          "Target": {
-			            "Entity": "medida.filtro_data_colaboradores"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.filtro_data_colaboradores"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_filtro_data_colaboradores"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_medida_totalizador_SetorDepartamento": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.totalizador_SetorDepartamento": {
-			          "Target": {
-			            "Entity": "medida.totalizador_SetorDepartamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_SetorDepartamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_totalizador_SetorDepartamento"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_totalizador_SetorDepartamento": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.totalizador_SetorDepartamento": {
-			          "Target": {
-			            "Entity": "medida.totalizador_SetorDepartamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_SetorDepartamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_totalizador_SetorDepartamento"
-			        }
-			      ]
-			    },
-			    "medida_has_eixo_ordinal_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "Medidas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "medida": {
-			          "Target": {
-			            "Entity": "medida"
-			          }
-			        },
-			        "medida.eixo_ordinal_setor": {
-			          "Target": {
-			            "Entity": "medida.eixo_ordinal_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "medida"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_ordinal_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "medidas_have_eixo_ordinal_setor"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_medida_eixo_x_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.eixo_x_setor": {
-			          "Target": {
-			            "Entity": "medida.eixo_x_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_x_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_eixo_x_setor"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_eixo_x_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.eixo_x_setor": {
-			          "Target": {
-			            "Entity": "medida.eixo_x_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_x_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_eixo_x_setor"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_medida_pct_colaboradores_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.pct_colaboradores_setor": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_pct_colaboradores_setor"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_pct_colaboradores_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_Colaboradores"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        },
-			        "medida.pct_colaboradores_setor": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_colaboradore"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_pct_colaboradores_setor"
-			        }
-			      ]
-			    },
-			    "dim_loja_has_centro_de_custo": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Lojas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_loja": {
-			          "Target": {
-			            "Entity": "dim_loja"
-			          }
-			        },
-			        "dim_loja.centro_de_custo": {
-			          "Target": {
-			            "Entity": "dim_loja.centro_de_custo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_loja"
-			            },
-			            "Object": {
-			              "Role": "dim_loja.centro_de_custo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_loja_have_centro_de_custos"
-			        }
-			      ]
-			    },
-			    "dim_loja_has_nome_loja": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Lojas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_loja": {
-			          "Target": {
-			            "Entity": "dim_loja"
-			          }
-			        },
-			        "dim_loja.nome_loja": {
-			          "Target": {
-			            "Entity": "dim_loja.nome_loja"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_loja"
-			            },
-			            "Object": {
-			              "Role": "dim_loja.nome_loja"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_loja_have_nome_loja"
-			        }
-			      ]
-			    },
-			    "dim_loja_has_tipo": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Lojas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_loja": {
-			          "Target": {
-			            "Entity": "dim_loja"
-			          }
-			        },
-			        "dim_loja.tipo": {
-			          "Target": {
-			            "Entity": "dim_loja.tipo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_loja"
-			            },
-			            "Object": {
-			              "Role": "dim_loja.tipo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_loja_have_tipos"
-			        }
-			      ]
-			    },
-			    "dim_loja_has_unidade": {
-			      "Binding": {
-			        "ConceptualEntity": "dim_Lojas"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "dim_loja": {
-			          "Target": {
-			            "Entity": "dim_loja"
-			          }
-			        },
-			        "dim_loja.unidade": {
-			          "Target": {
-			            "Entity": "dim_loja.unidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "dim_loja"
-			            },
-			            "Object": {
-			              "Role": "dim_loja.unidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "dim_loja_have_unidades"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "aux_diretoria.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_diretoria.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "aux_diretoria.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "aux_time_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "aux_time.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_time.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "aux_time.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "fact_banco_hora_has_data_saldo": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_BancoHoras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_banco_hora": {
-			          "Target": {
-			            "Entity": "fact_banco_hora"
-			          }
-			        },
-			        "fact_banco_hora.data_saldo": {
-			          "Target": {
-			            "Entity": "fact_banco_hora.data_saldo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_banco_hora"
-			            },
-			            "Object": {
-			              "Role": "fact_banco_hora.data_saldo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_banco_horas_have_data_saldos"
-			        }
-			      ]
-			    },
-			    "fact_banco_hora_has_saldo_minuto": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_BancoHoras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_banco_hora": {
-			          "Target": {
-			            "Entity": "fact_banco_hora"
-			          }
-			        },
-			        "fact_banco_hora.saldo_minuto": {
-			          "Target": {
-			            "Entity": "fact_banco_hora.saldo_minuto"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_banco_hora"
-			            },
-			            "Object": {
-			              "Role": "fact_banco_hora.saldo_minuto"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_banco_horas_have_saldo_minutos"
-			        }
-			      ]
-			    },
-			    "fact_banco_hora_has_saldo_acumulado": {
-			      "Binding": {
-			        "ConceptualEntity": "fact_BancoHoras"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "fact_banco_hora": {
-			          "Target": {
-			            "Entity": "fact_banco_hora"
-			          }
-			        },
-			        "fact_banco_hora.saldo_acumulado": {
-			          "Target": {
-			            "Entity": "fact_banco_hora.saldo_acumulado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "fact_banco_hora"
-			            },
-			            "Object": {
-			              "Role": "fact_banco_hora.saldo_acumulado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "fact_banco_horas_have_saldo_acumulados"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "aux_setor_departamento.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "aux_setor_departamento.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_mes_anos"
+			          "ID": "aux_diretorias_have_fact_colaboradores"
 			        }
 			      ]
 			    },
@@ -3335,20 +2124,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_diretoria_has_fact_colaboradore": {
+			    "aux_slicer_HE_has_aux_slicer_HE": {
 			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
+			        "ConceptualEntity": "aux_SlicerHE"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "aux_diretoria": {
+			        "aux_slicer_HE": {
 			          "Target": {
-			            "Entity": "aux_diretoria"
+			            "Entity": "aux_slicer_HE"
 			          }
 			        },
-			        "fact_colaboradore": {
+			        "aux_slicer_HE.aux_slicer_HE": {
 			          "Target": {
-			            "Entity": "fact_colaboradore"
+			            "Entity": "aux_slicer_HE.aux_slicer_HE"
 			          }
 			        }
 			      },
@@ -3356,19 +2145,197 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "aux_diretoria"
+			              "Role": "aux_slicer_HE"
 			            },
 			            "Object": {
-			              "Role": "fact_colaboradore"
+			              "Role": "aux_slicer_HE.aux_slicer_HE"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_fact_colaboradores"
+			          "ID": "aux_slicer_HE_have_aux_slicer_HE"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "aux_slicer_HE"
+			            },
+			            "Name": {
+			              "Role": "aux_slicer_HE.aux_slicer_HE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_slicer_HE_are_names_IDs_of_aux_slicer_HE"
 			        }
 			      ]
 			    },
-			    "aux_time_has_fact_colaboradore": {
+			    "fact_banco_hora_has_medida_saldo_horas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.saldo_horas": {
+			          "Target": {
+			            "Entity": "medida.saldo_horas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.saldo_horas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_saldo_horas"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "aux_setor_departamento.mes_ano": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "aux_setor_departamento.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_saldo_acumulado": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.saldo_acumulado": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.saldo_acumulado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.saldo_acumulado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_saldo_acumulados"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_saldo_minuto": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.saldo_minuto": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.saldo_minuto"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.saldo_minuto"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_saldo_minutos"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_data_saldo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.data_saldo": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.data_saldo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.data_saldo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_data_saldos"
+			        }
+			      ]
+			    },
+			    "aux_time_has_mes_ano": {
 			      "Binding": {
 			        "ConceptualEntity": "aux_Time"
 			      },
@@ -3379,9 +2346,9 @@ cultureInfo pt-BR
 			            "Entity": "aux_time"
 			          }
 			        },
-			        "fact_colaboradore": {
+			        "aux_time.mes_ano": {
 			          "Target": {
-			            "Entity": "fact_colaboradore"
+			            "Entity": "aux_time.mes_ano"
 			          }
 			        }
 			      },
@@ -3392,12 +2359,1332 @@ cultureInfo pt-BR
 			              "Role": "aux_time"
 			            },
 			            "Object": {
-			              "Role": "fact_colaboradore"
+			              "Role": "aux_time.mes_ano"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "aux_times_have_fact_colaboradores"
+			          "ID": "aux_times_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "aux_diretoria.mes_ano": {
+			          "Target": {
+			            "Entity": "aux_diretoria.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "aux_diretoria.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_unidade": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.unidade": {
+			          "Target": {
+			            "Entity": "dim_loja.unidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.unidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_unidades"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_tipo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.tipo": {
+			          "Target": {
+			            "Entity": "dim_loja.tipo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.tipo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_tipos"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_nome_loja": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.nome_loja": {
+			          "Target": {
+			            "Entity": "dim_loja.nome_loja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.nome_loja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_nome_loja"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_centro_de_custo": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.centro_de_custo": {
+			          "Target": {
+			            "Entity": "dim_loja.centro_de_custo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.centro_de_custo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_centro_de_custos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_setor": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_setor"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_pct_colaboradores_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.pct_colaboradores_setor": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_pct_colaboradores_setor"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_y_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_y_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_y_setor"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_eixo_y_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.eixo_y_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_eixo_y_setor"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_setor": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_setor": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_setor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_setor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_setor"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_SetorDepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_SetorDepartamento": {
+			          "Target": {
+			            "Entity": "medida.totalizador_SetorDepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_SetorDepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_SetorDepartamento"
+			        }
+			      ]
+			    },
+			    "aux_setor_departamento_has_medida_totalizador_SetorDepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SetorDepartamento"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_setor_departamento": {
+			          "Target": {
+			            "Entity": "aux_setor_departamento"
+			          }
+			        },
+			        "medida.totalizador_SetorDepartamento": {
+			          "Target": {
+			            "Entity": "medida.totalizador_SetorDepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_setor_departamento"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_SetorDepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_setor_departamentos_have_totalizador_SetorDepartamento"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_filtro_data_colaboradores": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.filtro_data_colaboradores": {
+			          "Target": {
+			            "Entity": "medida.filtro_data_colaboradores"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.filtro_data_colaboradores"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_filtro_data_colaboradores"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_time": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_time"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_pct_colaboradores_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.pct_colaboradores_time": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_pct_colaboradores_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_y_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_y_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_y_time"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_eixo_y_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.eixo_y_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_eixo_y_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_eixo_y_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.eixo_y_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_eixo_y_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_eixo_y_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.eixo_y_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_eixo_y_diretoria"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_time": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_time": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_time"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_time": {
+			          "Target": {
+			            "Entity": "medida.totalizador_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_time"
+			        }
+			      ]
+			    },
+			    "aux_time_has_medida_totalizador_time": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Time"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_time": {
+			          "Target": {
+			            "Entity": "aux_time"
+			          }
+			        },
+			        "medida.totalizador_time": {
+			          "Target": {
+			            "Entity": "medida.totalizador_time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_time"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_times_have_totalizador_time"
+			        }
+			      ]
+			    },
+			    "medida_has_eixo_ordinal_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "medida": {
+			          "Target": {
+			            "Entity": "medida"
+			          }
+			        },
+			        "medida.eixo_ordinal_diretoria": {
+			          "Target": {
+			            "Entity": "medida.eixo_ordinal_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "medida"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_ordinal_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "medidas_have_eixo_ordinal_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_totalizador_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.totalizador_diretoria": {
+			          "Target": {
+			            "Entity": "medida.totalizador_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_totalizador_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_totalizador_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.totalizador_diretoria": {
+			          "Target": {
+			            "Entity": "medida.totalizador_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.totalizador_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_totalizador_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_pct_colaboradores_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.pct_colaboradores_diretoria": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_pct_colaboradores_diretoria"
+			        }
+			      ]
+			    },
+			    "aux_diretoria_has_medida_pct_colaboradores_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_Diretoria"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_diretoria": {
+			          "Target": {
+			            "Entity": "aux_diretoria"
+			          }
+			        },
+			        "medida.pct_colaboradores_diretoria": {
+			          "Target": {
+			            "Entity": "medida.pct_colaboradores_diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_diretoria"
+			            },
+			            "Object": {
+			              "Role": "medida.pct_colaboradores_diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_diretorias_have_pct_colaboradores_diretoria"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_medida_qtd_funcionarios": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "medida.qtd_funcionarios": {
+			          "Target": {
+			            "Entity": "medida.qtd_funcionarios"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "medida.qtd_funcionarios"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_qtd_funcionarios"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_numero_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.numero_mes_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.numero_mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.numero_mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_numero_mes_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_ano": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.date": {
+			          "Target": {
+			            "Entity": "dim_calendario.date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_dates"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_cpf": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.cpf": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.cpf"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.cpf"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_cpfs"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_mes_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.mes_ano": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.mes_ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.mes_ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_mes_anos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_unidade": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.unidade": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.unidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.unidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_unidades"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_setordepartamento": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.setordepartamento": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.setordepartamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.setordepartamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_setordepartamentos"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_diretoria": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.diretoria": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.diretoria"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.diretoria"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_diretorias"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_time": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.time": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.time"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.time"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_times"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_cargo": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.cargo": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.cargo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.cargo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_cargoes"
+			        }
+			      ]
+			    },
+			    "fact_colaboradore_has_colaboradore": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_Colaboradores"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore"
+			          }
+			        },
+			        "fact_colaboradore.colaboradore": {
+			          "Target": {
+			            "Entity": "fact_colaboradore.colaboradore"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_colaboradore"
+			            },
+			            "Object": {
+			              "Role": "fact_colaboradore.colaboradore"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_colaboradores_have_colaboradores"
+			        }
+			      ]
+			    },
+			    "dim_loja_has_cod_loja": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Lojas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_loja": {
+			          "Target": {
+			            "Entity": "dim_loja"
+			          }
+			        },
+			        "dim_loja.cod_loja": {
+			          "Target": {
+			            "Entity": "dim_loja.cod_loja"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_loja"
+			            },
+			            "Object": {
+			              "Role": "dim_loja.cod_loja"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_loja_have_cod_loja"
 			        }
 			      ]
 			    },

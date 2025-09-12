@@ -1,0 +1,81 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "name": "3ce16294e7a5df64c2df",
+  "displayName": "Evo. HE",
+  "displayOption": "FitToPage",
+  "height": 1080,
+  "width": 1920,
+  "objects": {
+    "background": [
+      {
+        "properties": {
+          "image": {
+            "image": {
+              "name": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'03. Evolução HE.png'"
+                  }
+                }
+              },
+              "url": {
+                "expr": {
+                  "ResourcePackageItem": {
+                    "PackageName": "RegisteredResources",
+                    "PackageType": 1,
+                    "ItemName": "03._Evolu__o_HE23709535663931236.png"
+                  }
+                }
+              },
+              "scaling": {
+                "expr": {
+                  "Literal": {
+                    "Value": "'Fit'"
+                  }
+                }
+              }
+            }
+          },
+          "transparency": {
+            "expr": {
+              "Literal": {
+                "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Middle'"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "visibility": "HiddenInViewMode",
+  "visualInteractions": [
+    {
+      "source": "58a9da73f613c471e8cf",
+      "target": "ba65c7b8b55ae7344cf4",
+      "type": "NoFilter"
+    },
+    {
+      "source": "ba65c7b8b55ae7344cf4",
+      "target": "39e91880260990d1496c",
+      "type": "NoFilter"
+    },
+    {
+      "source": "39e91880260990d1496c",
+      "target": "ba65c7b8b55ae7344cf4",
+      "type": "NoFilter"
+    }
+  ]
+}

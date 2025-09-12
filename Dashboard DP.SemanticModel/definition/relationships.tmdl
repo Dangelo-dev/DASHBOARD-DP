@@ -1,7 +1,3 @@
-relationship AutoDetected_2258a1ff-108e-4d03-9034-4168b0dfec3e
-	fromColumn: fact_Colaboradores.'CENTRO DE CUSTO'
-	toColumn: dim_Lojas.'CENTRO DE CUSTO'
-
 relationship 7b6db7e9-a236-0ae0-fa06-63d6c504f087
 	fromColumn: fact_Colaboradores.MesAno
 	toColumn: dim_Calendario.Date
@@ -24,11 +20,6 @@ relationship 31f381de-c4dd-438c-4847-2de1a860f22b
 	fromColumn: aux_Time.MesAno
 	toColumn: dim_Calendario.Date
 
-relationship ce442d75-c866-fff0-e87e-0c1e6f7ea54a
-	toCardinality: many
-	fromColumn: fact_BancoHoras.CPF
-	toColumn: fact_Colaboradores.CPF
-
 relationship 784e53cf-b028-ec60-73c7-ac67c25aaa0c
 	toCardinality: many
 	fromColumn: aux_SetorDepartamento.'SETOR-DEPARTAMENTO '
@@ -37,4 +28,17 @@ relationship 784e53cf-b028-ec60-73c7-ac67c25aaa0c
 relationship 3de1de55-e653-5b9a-de57-775bd26eb697
 	fromColumn: aux_SetorDepartamento.MesAno
 	toColumn: dim_Calendario.Date
+
+relationship 0ca50d41-e13b-0091-340c-54f2f7448a67
+	fromColumn: fact_BancoHoras.'Data Saldo'
+	toColumn: dim_Calendario.Date
+
+relationship a6ff1b97-a73d-aad2-e6e7-df5ceabbed81
+	fromColumn: fact_Colaboradores.'CENTRO DE CUSTO'
+	toColumn: dim_Lojas.'NOME LOJA'
+
+relationship af89fadc-b130-0e6a-a868-bbbdf27a8e77
+	toCardinality: many
+	fromColumn: fact_BancoHoras.CPF
+	toColumn: fact_Colaboradores.CPF
 

@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "4297edc4dd46dddb61cb",
   "position": {
-    "x": 272.152117545376,
-    "y": 233.98444252376834,
-    "z": 10000,
-    "height": 54.762316335350036,
-    "width": 185.85998271391529,
-    "tabOrder": 9000
+    "x": 329.92518703241893,
+    "y": 234.31421446384041,
+    "z": 9000,
+    "height": 53.865336658354117,
+    "width": 245.08728179551122,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "bookmarkNavigator",

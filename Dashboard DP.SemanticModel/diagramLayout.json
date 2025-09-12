@@ -38,8 +38,8 @@
         },
         {
           "location": {
-            "x": 396.60538828657877,
-            "y": 481.93085030839222
+            "x": 393.44518598947451,
+            "y": 578.31702037007062
           },
           "nodeIndex": "fact_Colaboradores",
           "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
@@ -52,8 +52,8 @@
         },
         {
           "location": {
-            "x": 38.247908495665342,
-            "y": 712.06238124333277
+            "x": 675.02867136216412,
+            "y": 855.85158576157437
           },
           "nodeIndex": "dim_Lojas",
           "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
@@ -93,22 +93,21 @@
         },
         {
           "location": {
-            "x": 786.79764616998455,
-            "y": 760.66946164197986
+            "x": 0,
+            "y": 335.62225268146324
           },
           "nodeIndex": "fact_BancoHoras",
           "nodeLineageTag": "e88ac8a5-a991-4373-9ed2-e600c7d3f32e",
           "size": {
-            "height": 104,
+            "height": 152,
             "width": 234
           },
-          "zIndex": 5,
-          "expandedHeight": 152
+          "zIndex": 5
         },
         {
           "location": {
-            "x": 882.765609492284,
-            "y": 441.35665264348012
+            "x": 836.94267618427307,
+            "y": 362.3515952158748
           },
           "nodeIndex": "aux_SetorDepartamento",
           "nodeLineageTag": "a9990ffe-e20e-4c65-9167-bc271ce789db",
@@ -118,6 +117,19 @@
           },
           "zIndex": 0,
           "expandedHeight": 200
+        },
+        {
+          "location": {
+            "x": 1120.9426761842731,
+            "y": 451.92579288078718
+          },
+          "nodeIndex": "aux_SlicerHE",
+          "nodeLineageTag": "4ef086da-d481-4564-9906-800f7a3aae1a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

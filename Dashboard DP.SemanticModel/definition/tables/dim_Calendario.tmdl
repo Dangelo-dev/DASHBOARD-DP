@@ -28,6 +28,24 @@ table dim_Calendario
 
 		annotation SummarizationSetBy = Automatic
 
+	column MesNumero =
+			
+			MONTH( dim_Calendario[Date] )
+		formatString: 0
+		lineageTag: ef09b0e8-7a31-4159-8a5c-662dab56694c
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MesNome =
+			
+			FORMAT(dim_Calendario[Date], "mmmm" )
+		lineageTag: 7a552c50-4f33-40b6-add3-95c75f95b050
+		summarizeBy: none
+		sortByColumn: MesNumero
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dim_Calendario = calculated
 		mode: import
 		source =

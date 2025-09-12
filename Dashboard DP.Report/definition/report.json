@@ -56,13 +56,18 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "01._Pagina_Inicial6063009415134795.png",
-          "path": "01._Pagina_Inicial6063009415134795.png",
+          "name": "01._Pagina_Inicial18245679555703032.png",
+          "path": "01._Pagina_Inicial18245679555703032.png",
           "type": "Image"
         },
         {
-          "name": "02._Rel._de_Colaboradores8936109856058492.png",
-          "path": "02._Rel._de_Colaboradores8936109856058492.png",
+          "name": "02._Rel._de_Colaboradores5107522820366757.png",
+          "path": "02._Rel._de_Colaboradores5107522820366757.png",
+          "type": "Image"
+        },
+        {
+          "name": "03._Evolu__o_HE23709535663931236.png",
+          "path": "03._Evolu__o_HE23709535663931236.png",
           "type": "Image"
         }
       ]
