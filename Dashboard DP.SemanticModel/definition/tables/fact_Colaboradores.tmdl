@@ -57,17 +57,6 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
-	column MesAno
-		dataType: dateTime
-		formatString: Short Date
-		lineageTag: e648a2e6-2f10-4e31-9bbf-98da8274bbe6
-		summarizeBy: none
-		sourceColumn: MesAno
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
-
 	column CPF
 		dataType: string
 		lineageTag: c7400fd0-f7e5-4b91-ba8b-4cb26823cd22
@@ -83,6 +72,17 @@ table fact_Colaboradores
 		sourceColumn: CARGO RESUMIDO
 
 		annotation SummarizationSetBy = Automatic
+
+	column Data
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: 09d86fb3-05b3-4d01-8683-2058b5173ee8
+		summarizeBy: none
+		sourceColumn: Data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	partition fact_Colaboradores = m
 		mode: import
@@ -133,7 +133,7 @@ table fact_Colaboradores
 				            
 				            NormalizarCPF = Table.TransformColumns( TiparColuna, { { "CPF", each Text.PadStart( Text.From(_), 11, "0" ), type text } } ),
 				            
-				            AdicionarColuna = Table.AddColumn( NormalizarCPF, "MesAno", each Date.FromText( Text.BetweenDelimiters( MesAno, " ", ".xls" ) ), type date )
+				            AdicionarColuna = Table.AddColumn( NormalizarCPF, "Data", each Date.FromText( Text.BetweenDelimiters( MesAno, " ", ".xls" ) ), type date )
 				        in
 				            AdicionarColuna,
 				

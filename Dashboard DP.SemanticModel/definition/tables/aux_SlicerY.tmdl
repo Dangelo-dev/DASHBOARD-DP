@@ -1,4 +1,4 @@
-table aux_SlicerHoras
+table aux_SlicerY
 	lineageTag: e96ae993-da31-4c20-9de0-6a28ac24c20d
 
 	column Parameter
@@ -42,7 +42,7 @@ table aux_SlicerHoras
 
 		annotation SummarizationSetBy = Automatic
 
-	partition aux_SlicerHoras = calculated
+	partition aux_SlicerY = calculated
 		mode: import
 		source =
 				{

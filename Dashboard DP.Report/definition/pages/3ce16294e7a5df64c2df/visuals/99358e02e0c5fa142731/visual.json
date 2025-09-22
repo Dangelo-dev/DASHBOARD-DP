@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "aux_SlicerHE"
+                      "Entity": "aux_SlicerX"
                     }
                   },
                   "Property": "aux_SlicerHE"
@@ -45,7 +45,7 @@
                 "From": [
                   {
                     "Name": "a",
-                    "Entity": "aux_SlicerHE",
+                    "Entity": "aux_SlicerX",
                     "Type": 0
                   }
                 ],
@@ -83,7 +83,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "aux_SlicerHE"
+                                  "Entity": "aux_SlicerX"
                                 }
                               },
                               "Property": "aux_SlicerHE"
@@ -110,7 +110,7 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "aux_SlicerHE"
+                                      "Entity": "aux_SlicerX"
                                     }
                                   },
                                   "Property": "aux_SlicerHE Fields"

@@ -44,7 +44,7 @@ table Medidas
 			        COUNTROWS ( fact_Colaboradores ),
 			        FILTER (
 			            fact_Colaboradores,
-			            fact_Colaboradores[MesAno] =  MAX( dim_Calendario[Date] )
+			            fact_Colaboradores[Data] =  MAX( dim_Calendario[Date] )
 			        )
 			    ) > 0,
 			    1,
@@ -83,8 +83,8 @@ table Medidas
 
 	measure 'Titulo Dinamico Grafico HE' =
 			
-			VAR _SelecaoEixo = SELECTEDVALUE(aux_SlicerHE[NomeCampo])
-			VAR _SelecaoHoras = SELECTEDVALUE(aux_SlicerHoras[NomeCampo] )
+			VAR _SelecaoEixo = SELECTEDVALUE(aux_SlicerX[NomeCampo])
+			VAR _SelecaoHoras = SELECTEDVALUE(aux_SlicerY[NomeCampo] )
 			VAR _Texto = "Distribuição de HE por "
 			VAR _TextoPela = " - Devidas Pela Empresa"
 			VAR _TextoPelo = " - Devidas Pelo Colaborador"
@@ -128,8 +128,10 @@ table Medidas
 	measure 'Eixo Y Saldo Horas' = ```
 			
 			VAR _Tabela = ALLSELECTED( fact_BancoHoras[Data Saldo], fact_BancoHoras[Data Saldo] )
-			VAR _MaiorValor = MAXX( _Tabela, [SaldoHoras] )
-			VAR _Deslocamento = 1.2
+			VAR _MaxEmpresa = MAXX( _Tabela, [SaldoHoras Devido Empresa] )
+			VAR _MaxColaborador = MAXX( _Tabela, [SaldoHoras Devido Colaborador] )
+			VAR _MaiorValor = MAX( _MaxEmpresa, _MaxColaborador )
+			VAR _Deslocamento = 1.3
 			RETURN
 			_MaiorValor * _Deslocamento 
 			```
@@ -139,7 +141,7 @@ table Medidas
 
 	measure 'Cor Condicional Horas Devidas' = ```
 			
-			VAR _SelecaoParametro = SELECTEDVALUE( aux_SlicerHoras[Parameter Order] )
+			VAR _SelecaoParametro = SELECTEDVALUE( aux_SlicerY[Parameter Order] )
 			VAR _Switch = 
 			SWITCH(
 			    TRUE(), 

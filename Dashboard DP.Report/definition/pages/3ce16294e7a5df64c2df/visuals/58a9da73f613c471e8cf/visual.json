@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_BancoHoras"
+                      "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "Data Saldo"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "fact_BancoHoras.Data Saldo",
-              "nativeQueryRef": "Data Saldo",
+              "queryRef": "dim_Calendario.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -40,10 +40,10 @@
               "Column": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "fact_BancoHoras"
+                    "Entity": "dim_Calendario"
                   }
                 },
-                "Property": "Data Saldo"
+                "Property": "Date"
               }
             },
             "direction": "Ascending"
@@ -74,8 +74,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "f",
-                    "Entity": "fact_BancoHoras",
+                    "Name": "d",
+                    "Entity": "dim_Calendario",
                     "Type": 0
                   }
                 ],
@@ -88,10 +88,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "f"
+                                  "Source": "d"
                                 }
                               },
-                              "Property": "Data Saldo"
+                              "Property": "Date"
                             }
                           }
                         ],
@@ -280,6 +280,7 @@
             }
           ]
         },
+        "howCreated": "User",
         "objects": {
           "general": [
             {
@@ -295,6 +296,69 @@
             }
           ]
         }
+      },
+      {
+        "name": "9a2a617e36e4e9aea3de",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ab1a965d3a2abd21c116",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Filtro Data Colaboradores"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Medidas",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "m"
+                        }
+                      },
+                      "Property": "Filtro Data Colaboradores"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
     ]
   }

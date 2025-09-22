@@ -573,53 +573,46 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "1725e0c16dfbc6e28a34",
+        "name": "c544ff562253acff0618",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "fact_BancoHoras"
+                "Entity": "dim_Calendario"
               }
             },
-            "Property": "Saldo Minutos"
+            "Property": "Date"
           }
         },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "fact_BancoHoras",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "f"
-                        }
-                      },
-                      "Property": "Saldo Minutos"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "0L"
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "f29171dc74d47ac346d8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
               }
-            }
-          ]
+            },
+            "Property": "SaldoHoras Devido Empresa"
+          }
         },
-        "howCreated": "User"
+        "type": "Advanced"
+      },
+      {
+        "name": "782f3438df688208b9cf",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "SaldoHoras Devido Colaborador"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

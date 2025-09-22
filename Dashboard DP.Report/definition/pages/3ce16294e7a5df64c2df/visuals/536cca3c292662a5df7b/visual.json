@@ -20,7 +20,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "aux_SlicerHoras"
+                      "Entity": "aux_SlicerY"
                     }
                   },
                   "Property": "Parameter"
@@ -44,7 +44,7 @@
                 "From": [
                   {
                     "Name": "a",
-                    "Entity": "aux_SlicerHoras",
+                    "Entity": "aux_SlicerY",
                     "Type": 0
                   }
                 ],
@@ -82,7 +82,7 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "aux_SlicerHoras"
+                                  "Entity": "aux_SlicerY"
                                 }
                               },
                               "Property": "Parameter"
@@ -109,7 +109,7 @@
                                 "Column": {
                                   "Expression": {
                                     "SourceRef": {
-                                      "Entity": "aux_SlicerHoras"
+                                      "Entity": "aux_SlicerY"
                                     }
                                   },
                                   "Property": "Parameter Fields"
@@ -253,5 +253,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "95d13addd173cd5fdef3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "aux_SlicerY"
+              }
+            },
+            "Property": "Parameter"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   }
 }

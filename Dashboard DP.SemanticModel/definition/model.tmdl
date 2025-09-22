@@ -17,8 +17,8 @@ ref table dim_Calendario
 ref table Medidas
 ref table dim_Lojas
 ref table fact_BancoHoras
-ref table aux_SlicerHE
-ref table aux_SlicerHoras
+ref table aux_SlicerX
+ref table aux_SlicerY
 
 ref cultureInfo pt-BR
 

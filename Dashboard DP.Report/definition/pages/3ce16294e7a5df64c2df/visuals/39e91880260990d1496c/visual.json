@@ -38,7 +38,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "aux_SlicerHE"
+                      "Entity": "aux_SlicerX"
                     }
                   },
                   "Property": "aux_SlicerHE"
@@ -73,7 +73,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "aux_SlicerHoras"
+                      "Entity": "aux_SlicerY"
                     }
                   },
                   "Property": "Parameter"

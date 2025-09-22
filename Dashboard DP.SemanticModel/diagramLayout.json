@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 483.09274471756549,
-            "y": 187.46879992403319
+            "x": 296.64080918841682,
+            "y": 42.099494257239421
           },
           "nodeIndex": "dim_Calendario",
           "nodeLineageTag": "e44cc038-472a-45fc-851b-fd8949d1a19e",
@@ -38,13 +38,13 @@
         },
         {
           "location": {
-            "x": 453.48902963445454,
-            "y": 545.13489625047646
+            "x": 429.78751240617294,
+            "y": 519.85327787364281
           },
           "nodeIndex": "fact_Colaboradores",
           "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
           "size": {
-            "height": 200,
+            "height": 152,
             "width": 249.80101148552114
           },
           "zIndex": 8,
@@ -52,8 +52,8 @@
         },
         {
           "location": {
-            "x": 820.397977028958,
-            "y": 304.39628491688921
+            "x": 6.6458855246233952,
+            "y": 603.03540199323731
           },
           "nodeIndex": "dim_Lojas",
           "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
@@ -65,8 +65,8 @@
         },
         {
           "location": {
-            "x": 110.60708039864743,
-            "y": 346.682960721328
+            "x": 726.84652833396888,
+            "y": 209.2141607972948
           },
           "nodeIndex": "fact_BancoHoras",
           "nodeLineageTag": "e88ac8a5-a991-4373-9ed2-e600c7d3f32e",
@@ -81,8 +81,7 @@
             "x": 1120.9426761842731,
             "y": 451.92579288078718
           },
-          "nodeIndex": "aux_SlicerHE",
-          "nodeLineageTag": "4ef086da-d481-4564-9906-800f7a3aae1a",
+          "nodeIndex": "aux_SlicerX",
           "size": {
             "height": 152,
             "width": 234
@@ -94,7 +93,7 @@
             "x": 1404.9426761842731,
             "y": 296.56744812523823
           },
-          "nodeIndex": "aux_SlicerHoras",
+          "nodeIndex": "aux_SlicerY",
           "size": {
             "height": 152,
             "width": 234

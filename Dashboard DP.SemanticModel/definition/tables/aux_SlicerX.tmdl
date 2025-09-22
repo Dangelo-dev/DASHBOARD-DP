@@ -1,4 +1,4 @@
-table aux_SlicerHE
+table aux_SlicerX
 	lineageTag: 4ef086da-d481-4564-9906-800f7a3aae1a
 
 	column aux_SlicerHE
@@ -42,12 +42,12 @@ table aux_SlicerHE
 
 		annotation SummarizationSetBy = Automatic
 
-	partition aux_SlicerHE = calculated
+	partition aux_SlicerX = calculated
 		mode: import
 		source =
 				{
-				    ("CENTRO DE CUSTO", NAMEOF('dim_Lojas'[NOME LOJA]), 0),
-				    ("COLABORADOR", NAMEOF('fact_Colaboradores'[COLABORADORES]), 1)
+				    ("CENTRO DE CUSTO", NAMEOF( 'dim_Lojas'[NOME LOJA] ), 0),
+				    ("COLABORADOR", NAMEOF( 'fact_Colaboradores'[COLABORADORES] ), 1)
 				}
 
 	annotation PBI_Id = 00bc38c48c714660944a48607fc50e11

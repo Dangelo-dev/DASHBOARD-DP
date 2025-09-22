@@ -274,43 +274,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "fact_colaboradore.mes_ano": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "fact_Colaboradores",
-			          "ConceptualProperty": "MesAno"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mes ano": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "me ano": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "MesAno": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
 			    "fact_colaboradore.cpf": {
 			      "Definition": {
 			        "Binding": {
@@ -1068,7 +1031,7 @@ cultureInfo pt-BR
 			    "aux_slicer_HE": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "aux_SlicerHE"
+			          "ConceptualEntity": "aux_SlicerX"
 			        }
 			      },
 			      "State": "Generated",
@@ -1096,7 +1059,7 @@ cultureInfo pt-BR
 			    "aux_slicer_HE.aux_slicer_HE": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualEntity": "aux_SlicerX",
 			          "ConceptualProperty": "aux_SlicerHE"
 			        }
 			      },
@@ -1141,7 +1104,7 @@ cultureInfo pt-BR
 			    "aux_slicer_HE.aux_SlicerHE_field": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualEntity": "aux_SlicerX",
 			          "ConceptualProperty": "aux_SlicerHE Fields"
 			        }
 			      },
@@ -1260,7 +1223,7 @@ cultureInfo pt-BR
 			    "aux_slicer_HE.aux_SlicerHE_order": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualEntity": "aux_SlicerX",
 			          "ConceptualProperty": "aux_SlicerHE Order"
 			        }
 			      },
@@ -1533,7 +1496,7 @@ cultureInfo pt-BR
 			    "aux_slicer_HE.nome_campo": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualEntity": "aux_SlicerX",
 			          "ConceptualProperty": "NomeCampo"
 			        }
 			      },
@@ -1658,7 +1621,7 @@ cultureInfo pt-BR
 			    },
 			    "aux_slicer_HE_has_nome_campo": {
 			      "Binding": {
-			        "ConceptualEntity": "aux_SlicerHE"
+			        "ConceptualEntity": "aux_SlicerX"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -1790,7 +1753,7 @@ cultureInfo pt-BR
 			    },
 			    "aux_slicer_HE_has_medida_titulo_dinamico_grafico_HE": {
 			      "Binding": {
-			        "ConceptualEntity": "aux_SlicerHE"
+			        "ConceptualEntity": "aux_SlicerX"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -1955,7 +1918,7 @@ cultureInfo pt-BR
 			    },
 			    "aux_slicer_HE_has_aux_slicer_HE": {
 			      "Binding": {
-			        "ConceptualEntity": "aux_SlicerHE"
+			        "ConceptualEntity": "aux_SlicerX"
 			      },
 			      "State": "Generated",
 			      "Roles": {

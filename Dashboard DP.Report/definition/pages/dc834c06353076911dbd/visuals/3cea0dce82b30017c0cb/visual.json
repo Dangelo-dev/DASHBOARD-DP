@@ -268,5 +268,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "82a1d4d0399645307112",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "Qtd Funcionarios"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "697983b7f29e8daab1e7",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "SaldoHoras Devido Empresa"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "30f661c60e38966e621a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Medidas"
+              }
+            },
+            "Property": "SaldoHoras Devido Colaborador"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
