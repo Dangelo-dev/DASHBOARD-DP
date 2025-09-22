@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "eccec54523b7ff359d4f",
   "position": {
-    "x": 148.29268292682926,
-    "y": 435.51219512195121,
+    "x": 151.18110236220471,
+    "y": 285.73228346456693,
     "z": 8000,
-    "height": 96.780487804878049,
-    "width": 291.90243902439022,
-    "tabOrder": 7000
+    "height": 114.89763779527559,
+    "width": 270.61417322834643,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "SaldoHoras"
+                  "Property": "SaldoHoras Devido Empresa"
                 }
               },
-              "queryRef": "Medidas.SaldoHoras",
-              "nativeQueryRef": "SaldoHoras"
+              "queryRef": "Medidas.SaldoHoras Devido Empresa",
+              "nativeQueryRef": "SaldoHoras Devido Empresa"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "SaldoHoras"
+                "Property": "SaldoHoras Devido Empresa"
               }
             },
             "direction": "Descending"
@@ -84,9 +84,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
+                    "Literal": {
+                      "Value": "'#FF0000'"
                     }
                   }
                 }
@@ -95,7 +94,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "32D"
+                  "Value": "30D"
                 }
               }
             },

@@ -76,6 +76,14 @@ table fact_Colaboradores
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'CARGO RESUMIDO'
+		dataType: string
+		lineageTag: d19e0961-7fc5-41bd-b38f-8c75bc25d503
+		summarizeBy: none
+		sourceColumn: CARGO RESUMIDO
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_Colaboradores = m
 		mode: import
 		source = ```
@@ -105,7 +113,8 @@ table fact_Colaboradores
 				                "DIRETORIA", // Necessária
 				                "TIME", // Necessária
 				                "SETOR-DEPARTAMENTO ", // Necessária
-				                "CENTRO DE CUSTO" }, // Necessária
+				                "CENTRO DE CUSTO", // Necessária
+				                "CARGO RESUMIDO" }, // Slicer Colab. por CC
 				
 				            // Tipagem centralizada dos dados
 				            DefinirTipagem =  {
@@ -142,9 +151,19 @@ table fact_Colaboradores
 				        [Tabelas],
 				
 				    // Unir todas as planilhas tratadas pela função
-				    CombinarTabelas = Table.Combine( ListaTabelas )
+				    CombinarTabelas = Table.Combine( ListaTabelas ),
+				    RenomearDepartamentos = Table.ReplaceValue(CombinarTabelas,"RECURSOS HUMANOS","RH",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value" = Table.ReplaceValue(RenomearDepartamentos,"FINANCEIRO","FINAN",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","COMPRAS","COMP",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","ADM-LOJA","ADM-LJ",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value3" = Table.ReplaceValue(#"Replaced Value2","MARKETING","MKT",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value4" = Table.ReplaceValue(#"Replaced Value3","COMERCIAL","COML",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value5" = Table.ReplaceValue(#"Replaced Value4","LOGÍSTICA","LOG",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value6" = Table.ReplaceValue(#"Replaced Value5","BACK-SUPER","COML VD",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value7" = Table.ReplaceValue(#"Replaced Value6","PROCESSOS","PROCE",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "}),
+				    #"Replaced Value8" = Table.ReplaceValue(#"Replaced Value7","ADM-VD","ADM VD",Replacer.ReplaceText,{"SETOR-DEPARTAMENTO "})
 				in
-				    CombinarTabelas
+				    #"Replaced Value8"
 				```
 
 	annotation PBI_NavigationStepName = Navigation

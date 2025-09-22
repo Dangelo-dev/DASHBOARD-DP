@@ -10,8 +10,8 @@
       "nodes": [
         {
           "location": {
-            "x": 407.24788958706438,
-            "y": 247.51264356901322
+            "x": 483.09274471756549,
+            "y": 187.46879992403319
           },
           "nodeIndex": "dim_Calendario",
           "nodeLineageTag": "e44cc038-472a-45fc-851b-fd8949d1a19e",
@@ -38,8 +38,8 @@
         },
         {
           "location": {
-            "x": 393.44518598947451,
-            "y": 578.31702037007062
+            "x": 453.48902963445454,
+            "y": 545.13489625047646
           },
           "nodeIndex": "fact_Colaboradores",
           "nodeLineageTag": "7112ef34-680b-4ff9-b9d9-f1d1a7fb0686",
@@ -52,8 +52,8 @@
         },
         {
           "location": {
-            "x": 675.02867136216412,
-            "y": 855.85158576157437
+            "x": 820.397977028958,
+            "y": 304.39628491688921
           },
           "nodeIndex": "dim_Lojas",
           "nodeLineageTag": "da5ef227-d668-4715-9ef5-b23eb61b5f03",
@@ -65,36 +65,8 @@
         },
         {
           "location": {
-            "x": 168.97809708611129,
-            "y": 97.5185470526529
-          },
-          "nodeIndex": "aux_Diretoria",
-          "nodeLineageTag": "a4d5a0e9-088d-4f95-92c4-fb93d9cbabce",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 6,
-          "expandedHeight": 200
-        },
-        {
-          "location": {
-            "x": 652.48904854305579,
-            "y": 101.69266200282208
-          },
-          "nodeIndex": "aux_Time",
-          "nodeLineageTag": "7f3ea877-f3a4-4596-b3a8-7e90cd4b866b",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 4,
-          "expandedHeight": 200
-        },
-        {
-          "location": {
-            "x": 0,
-            "y": 335.62225268146324
+            "x": 110.60708039864743,
+            "y": 346.682960721328
           },
           "nodeIndex": "fact_BancoHoras",
           "nodeLineageTag": "e88ac8a5-a991-4373-9ed2-e600c7d3f32e",
@@ -106,25 +78,23 @@
         },
         {
           "location": {
-            "x": 836.94267618427307,
-            "y": 362.3515952158748
-          },
-          "nodeIndex": "aux_SetorDepartamento",
-          "nodeLineageTag": "a9990ffe-e20e-4c65-9167-bc271ce789db",
-          "size": {
-            "height": 128,
-            "width": 234
-          },
-          "zIndex": 0,
-          "expandedHeight": 200
-        },
-        {
-          "location": {
             "x": 1120.9426761842731,
             "y": 451.92579288078718
           },
           "nodeIndex": "aux_SlicerHE",
           "nodeLineageTag": "4ef086da-d481-4564-9906-800f7a3aae1a",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1404.9426761842731,
+            "y": 296.56744812523823
+          },
+          "nodeIndex": "aux_SlicerHoras",
           "size": {
             "height": 152,
             "width": 234

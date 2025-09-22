@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "99358e02e0c5fa142731",
   "position": {
-    "x": 1612.4878048780488,
-    "y": 571.31707317073176,
+    "x": 1578.8832487309646,
+    "y": 630.253807106599,
     "z": 2000,
-    "height": 60.8780487804878,
-    "width": 263.80487804878049,
-    "tabOrder": 1000
+    "height": 61.7258883248731,
+    "width": 263.14720812182742,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "slicer",
@@ -121,7 +121,7 @@
                         },
                         "valueMap": [
                           {
-                            "0": "Centro de Custo"
+                            "0": "CENTRO DE CUSTO"
                           }
                         ]
                       }
@@ -185,7 +185,7 @@
             "textSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "14D"
                 }
               }
             },

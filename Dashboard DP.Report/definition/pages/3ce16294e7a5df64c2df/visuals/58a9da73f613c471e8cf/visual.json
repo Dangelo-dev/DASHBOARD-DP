@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "58a9da73f613c471e8cf",
   "position": {
     "x": 165.6359102244389,
     "y": 137.356608478803,
     "z": 1000,
     "height": 64.638403990024941,
-    "width": 230.27431421446386
+    "width": 230.27431421446386,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "slicer",
@@ -98,7 +99,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "datetime'2025-08-31T00:00:00'"
+                                "Value": "datetime'2025-09-15T00:00:00'"
                               }
                             }
                           ]

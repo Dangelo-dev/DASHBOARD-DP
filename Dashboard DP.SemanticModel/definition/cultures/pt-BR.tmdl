@@ -596,186 +596,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.pct_colaboradores_diretoria": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Pct Colaboradores Diretoria"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pct colaboradores diretoria": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.totalizador_diretoria": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Totalizador Diretoria"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "totalizador diretoria": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.eixo_ordinal_diretoria": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Eixo Ordinal Diretoria"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "eixo ordinal diretoria": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.totalizador_time": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Totalizador Time"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "totalizador time": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "totalizador duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "totalizador interval": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "totalizador moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "totalizador period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "totalizador timetable": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
-			    "medida.eixo_ordinal_time": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Eixo Ordinal Time"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "eixo ordinal time": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "eixo ordinal duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "eixo ordinal interval": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "eixo ordinal moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "eixo ordinal period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "eixo ordinal timetable": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        }
-			      ]
-			    },
 			    "medida.eixo_y_diretoria": {
 			      "Definition": {
 			        "Binding": {
@@ -848,72 +668,6 @@ cultureInfo pt-BR
 			        },
 			        {
 			          "eixo y timetable": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        }
-			      ]
-			    },
-			    "medida.pct_colaboradores_time": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Pct Colaboradores Time"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pct colaboradores time": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "pct colaboradore duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "pct colaboradore interval": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "pct colaboradore moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.762
-			          }
-			        },
-			        {
-			          "pct colaboradore period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.739
-			          }
-			        },
-			        {
-			          "pct colaboradore timetable": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1010,65 +764,17 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "medida.totalizador_SetorDepartamento": {
+			    "medida.eixo_y_SetorDepartamento": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Totalizador SetorDepartamento"
+			          "ConceptualProperty": "Eixo Y SetorDepartamento"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "totalizador SetorDepartamento": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.eixo_ordinal_setor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Eixo Ordinal Setor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "eixo ordinal setor": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.eixo_y_setor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Eixo Y Setor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "eixo y setor": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "medida.pct_colaboradores_setor": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "Medidas",
-			          "ConceptualProperty": "Pct Colaboradores Setor"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "pct colaboradores setor": {
+			          "eixo y SetorDepartamento": {
 			            "State": "Generated"
 			          }
 			        }
@@ -1127,7 +833,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "Centro de Custo": {
+			          "CENTRO DE CUSTO": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1166,262 +872,6 @@ cultureInfo pt-BR
 			        {
 			          "unidade": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "aux_diretoria": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Diretoria"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "aux diretoria": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aux_Diretoria": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "aux_diretoria.diretoria": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Diretoria",
-			          "ConceptualProperty": "DIRETORIA"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "diretoria": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "aux_diretoria.mes_ano": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Diretoria",
-			          "ConceptualProperty": "MesAno"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mes ano": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "me ano": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "MesAno": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "aux_time": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Time"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "aux time": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aux_Time": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "aux duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "aux interval": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "aux moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.75
-			          }
-			        },
-			        {
-			          "aux period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        },
-			        {
-			          "aux timetable": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.727
-			          }
-			        }
-			      ]
-			    },
-			    "aux_time.mes_ano": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Time",
-			          "ConceptualProperty": "MesAno"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mes ano": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "me ano": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "MesAno": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "aux_time.time": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_Time",
-			          "ConceptualProperty": "TIME"
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "time": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "duration": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "interval": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "moment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.736
-			          }
-			        },
-			        {
-			          "period": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
-			          }
-			        },
-			        {
-			          "timetable": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.714
 			          }
 			        }
 			      ]
@@ -1588,90 +1038,6 @@ cultureInfo pt-BR
 			        {
 			          "saldo acumulado": {
 			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_SetorDepartamento"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "aux setor departamento": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "aux_SetorDepartamento": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento.mes_ano": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_SetorDepartamento",
-			          "ConceptualProperty": "MesAno"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "mes ano": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "me ano": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.78
-			          }
-			        },
-			        {
-			          "MesAno": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "date": {
-			            "State": "Generated",
-			            "Weight": 0.7
-			          }
-			        }
-			      ],
-			      "SemanticType": "Time"
-			    },
-			    "aux_setor_departamento.setordepartamento": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "aux_SetorDepartamento",
-			          "ConceptualProperty": "SETOR-DEPARTAMENTO "
-			        }
-			      },
-			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
-			      "Terms": [
-			        {
-			          "setor-departamento": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "setor departamento": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        }
 			      ]
@@ -2009,75 +1375,208 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "dim_calendario.mes_numero": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario",
+			          "ConceptualProperty": "MesNumero"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes numero": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me numero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNumero": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "dim_calendario.mes_nome": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "dim_Calendario",
+			          "ConceptualProperty": "MesNome"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mes nome": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "me nome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "MesNome": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "medida.titulo_dinamico_grafico_HE": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Titulo Dinamico Grafico HE"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "titulo dinamico grafico HE": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "medida.SaldoHoras_devido_colaborador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "SaldoHoras Devido Colaborador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SaldoHoras devido colaborador": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "HORAS DEVIDAS PELO COLABORADOR": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "medida.SaldoHoras_devido_empresa": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "SaldoHoras Devido Empresa"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "SaldoHoras devido empresa": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EMPRESA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "HORAS DEVIDAS PELA EMPRESA": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "fact_banco_hora.colaborador": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "fact_BancoHoras",
+			          "ConceptualProperty": "Colaborador"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "colaborador": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE.nome_campo": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "aux_SlicerHE",
+			          "ConceptualProperty": "NomeCampo"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "nome campo": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NomeCampo": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "campo": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "medida.eixo_y_saldo_horas": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Medidas",
+			          "ConceptualProperty": "Eixo Y Saldo Horas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eixo y saldo horas": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "aux_time_has_fact_colaboradore": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_fact_colaboradores"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_fact_colaboradore": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_fact_colaboradores"
-			        }
-			      ]
-			    },
 			    "fact_colaboradore_has_dim_loja": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
@@ -2121,6 +1620,336 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "dim_loja_have_fact_colaboradores"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_medida_eixo_y_saldo_horas": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.eixo_y_saldo_horas": {
+			          "Target": {
+			            "Entity": "medida.eixo_y_saldo_horas"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.eixo_y_saldo_horas"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_eixo_y_saldo_horas"
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE_has_nome_campo": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SlicerHE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_slicer_HE": {
+			          "Target": {
+			            "Entity": "aux_slicer_HE"
+			          }
+			        },
+			        "aux_slicer_HE.nome_campo": {
+			          "Target": {
+			            "Entity": "aux_slicer_HE.nome_campo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_slicer_HE"
+			            },
+			            "Object": {
+			              "Role": "aux_slicer_HE.nome_campo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_slicer_HE_have_nome_campo"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_colaborador": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "fact_banco_hora.colaborador": {
+			          "Target": {
+			            "Entity": "fact_banco_hora.colaborador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "fact_banco_hora.colaborador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_colaboradors"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_medida_SaldoHoras_devido_empresa": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.SaldoHoras_devido_empresa": {
+			          "Target": {
+			            "Entity": "medida.SaldoHoras_devido_empresa"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.SaldoHoras_devido_empresa"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_SaldoHoras_devido_empresa"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_medida_SaldoHoras_devido_colaborador": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.SaldoHoras_devido_colaborador": {
+			          "Target": {
+			            "Entity": "medida.SaldoHoras_devido_colaborador"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.SaldoHoras_devido_colaborador"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_SaldoHoras_devido_colaborador"
+			        }
+			      ]
+			    },
+			    "aux_slicer_HE_has_medida_titulo_dinamico_grafico_HE": {
+			      "Binding": {
+			        "ConceptualEntity": "aux_SlicerHE"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "aux_slicer_HE": {
+			          "Target": {
+			            "Entity": "aux_slicer_HE"
+			          }
+			        },
+			        "medida.titulo_dinamico_grafico_HE": {
+			          "Target": {
+			            "Entity": "medida.titulo_dinamico_grafico_HE"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "aux_slicer_HE"
+			            },
+			            "Object": {
+			              "Role": "medida.titulo_dinamico_grafico_HE"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "aux_slicer_HE_have_titulo_dinamico_grafico_HE"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_medida_teste": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.teste": {
+			          "Target": {
+			            "Entity": "medida.teste"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.teste"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_teste"
+			        }
+			      ]
+			    },
+			    "fact_banco_hora_has_medida_grafico_SaldoHoras": {
+			      "Binding": {
+			        "ConceptualEntity": "fact_BancoHoras"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "fact_banco_hora": {
+			          "Target": {
+			            "Entity": "fact_banco_hora"
+			          }
+			        },
+			        "medida.grafico_SaldoHoras": {
+			          "Target": {
+			            "Entity": "medida.grafico_SaldoHoras"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "fact_banco_hora"
+			            },
+			            "Object": {
+			              "Role": "medida.grafico_SaldoHoras"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "fact_banco_horas_have_grafico_SaldoHoras"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_nome": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_nome": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_nome"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_nome"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_nome"
+			        }
+			      ]
+			    },
+			    "dim_calendario_has_mes_numero": {
+			      "Binding": {
+			        "ConceptualEntity": "dim_Calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "dim_calendario": {
+			          "Target": {
+			            "Entity": "dim_calendario"
+			          }
+			        },
+			        "dim_calendario.mes_numero": {
+			          "Target": {
+			            "Entity": "dim_calendario.mes_numero"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "dim_calendario"
+			            },
+			            "Object": {
+			              "Role": "dim_calendario.mes_numero"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dim_calendarios_have_mes_numeros"
 			        }
 			      ]
 			    },
@@ -2200,39 +2029,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_banco_horas_have_saldo_horas"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "aux_setor_departamento.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "aux_setor_departamento.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_mes_anos"
 			        }
 			      ]
 			    },
@@ -2332,72 +2128,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_banco_horas_have_data_saldos"
-			        }
-			      ]
-			    },
-			    "aux_time_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "aux_time.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_time.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "aux_time.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_mes_anos"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_mes_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "aux_diretoria.mes_ano": {
-			          "Target": {
-			            "Entity": "aux_diretoria.mes_ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "aux_diretoria.mes_ano"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_mes_anos"
 			        }
 			      ]
 			    },
@@ -2566,40 +2296,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_setor_departamento_has_medida_pct_colaboradores_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.pct_colaboradores_setor": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_pct_colaboradores_setor"
-			        }
-			      ]
-			    },
-			    "fact_colaboradore_has_medida_eixo_y_setor": {
+			    "fact_colaboradore_has_medida_eixo_y_SetorDepartamento": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
 			      },
@@ -2610,9 +2307,9 @@ cultureInfo pt-BR
 			            "Entity": "fact_colaboradore"
 			          }
 			        },
-			        "medida.eixo_y_setor": {
+			        "medida.eixo_y_SetorDepartamento": {
 			          "Target": {
-			            "Entity": "medida.eixo_y_setor"
+			            "Entity": "medida.eixo_y_SetorDepartamento"
 			          }
 			        }
 			      },
@@ -2623,45 +2320,12 @@ cultureInfo pt-BR
 			              "Role": "fact_colaboradore"
 			            },
 			            "Object": {
-			              "Role": "medida.eixo_y_setor"
+			              "Role": "medida.eixo_y_SetorDepartamento"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "fact_colaboradores_have_eixo_y_setor"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_medida_eixo_y_setor": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.eixo_y_setor": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_setor"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_setor"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_eixo_y_setor"
+			          "ID": "fact_colaboradores_have_eixo_y_SetorDepartamento"
 			        }
 			      ]
 			    },
@@ -2731,39 +2395,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_setor_departamento_has_medida_totalizador_SetorDepartamento": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "medida.totalizador_SetorDepartamento": {
-			          "Target": {
-			            "Entity": "medida.totalizador_SetorDepartamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_SetorDepartamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_totalizador_SetorDepartamento"
-			        }
-			      ]
-			    },
 			    "fact_colaboradore_has_medida_filtro_data_colaboradores": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
@@ -2830,39 +2461,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_time_has_medida_pct_colaboradores_time": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "medida.pct_colaboradores_time": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_pct_colaboradores_time"
-			        }
-			      ]
-			    },
 			    "fact_colaboradore_has_medida_eixo_y_time": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
@@ -2896,39 +2494,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_time_has_medida_eixo_y_time": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "medida.eixo_y_time": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_eixo_y_time"
-			        }
-			      ]
-			    },
 			    "fact_colaboradore_has_medida_eixo_y_diretoria": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
@@ -2959,39 +2524,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_colaboradores_have_eixo_y_diretoria"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_medida_eixo_y_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "medida.eixo_y_diretoria": {
-			          "Target": {
-			            "Entity": "medida.eixo_y_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "medida.eixo_y_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_eixo_y_diretoria"
 			        }
 			      ]
 			    },
@@ -3061,39 +2593,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_time_has_medida_totalizador_time": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Time"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_time": {
-			          "Target": {
-			            "Entity": "aux_time"
-			          }
-			        },
-			        "medida.totalizador_time": {
-			          "Target": {
-			            "Entity": "medida.totalizador_time"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_time"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_time"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_times_have_totalizador_time"
-			        }
-			      ]
-			    },
 			    "medida_has_eixo_ordinal_diretoria": {
 			      "Binding": {
 			        "ConceptualEntity": "Medidas"
@@ -3160,39 +2659,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "aux_diretoria_has_medida_totalizador_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "medida.totalizador_diretoria": {
-			          "Target": {
-			            "Entity": "medida.totalizador_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "medida.totalizador_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_totalizador_diretoria"
-			        }
-			      ]
-			    },
 			    "fact_colaboradore_has_medida_pct_colaboradores_diretoria": {
 			      "Binding": {
 			        "ConceptualEntity": "fact_Colaboradores"
@@ -3223,39 +2689,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_colaboradores_have_pct_colaboradores_diretoria"
-			        }
-			      ]
-			    },
-			    "aux_diretoria_has_medida_pct_colaboradores_diretoria": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_Diretoria"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_diretoria": {
-			          "Target": {
-			            "Entity": "aux_diretoria"
-			          }
-			        },
-			        "medida.pct_colaboradores_diretoria": {
-			          "Target": {
-			            "Entity": "medida.pct_colaboradores_diretoria"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_diretoria"
-			            },
-			            "Object": {
-			              "Role": "medida.pct_colaboradores_diretoria"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_diretorias_have_pct_colaboradores_diretoria"
 			        }
 			      ]
 			    },
@@ -3718,39 +3151,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "fact_banco_horas_have_fact_colaboradores"
-			        }
-			      ]
-			    },
-			    "aux_setor_departamento_has_fact_colaboradore": {
-			      "Binding": {
-			        "ConceptualEntity": "aux_SetorDepartamento"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "aux_setor_departamento": {
-			          "Target": {
-			            "Entity": "aux_setor_departamento"
-			          }
-			        },
-			        "fact_colaboradore": {
-			          "Target": {
-			            "Entity": "fact_colaboradore"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "aux_setor_departamento"
-			            },
-			            "Object": {
-			              "Role": "fact_colaboradore"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "aux_setor_departamentos_have_fact_colaboradores"
 			        }
 			      ]
 			    }

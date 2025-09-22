@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "89dfd0915ba0ba246ac0",
   "position": {
-    "x": 792.14285714285722,
-    "y": 138.57142857142858,
-    "z": 5000,
-    "height": 61.428571428571431,
-    "width": 210.71428571428572,
-    "tabOrder": 4000
+    "x": 791.875,
+    "y": 135.625,
+    "z": 4000,
+    "height": 51.875,
+    "width": 211.25,
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "slicer",
@@ -120,6 +120,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "TIME",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   },

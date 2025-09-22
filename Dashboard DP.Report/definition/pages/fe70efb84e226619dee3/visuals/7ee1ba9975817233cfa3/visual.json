@@ -1,0 +1,261 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "7ee1ba9975817233cfa3",
+  "position": {
+    "x": 164.88852188274154,
+    "y": 214.03798513625102,
+    "z": 8000,
+    "height": 811.75887696118912,
+    "width": 1702.7910817506192,
+    "tabOrder": 6000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "UNIDADE"
+                }
+              },
+              "queryRef": "fact_Colaboradores.UNIDADE",
+              "nativeQueryRef": "UNIDADE"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "CENTRO DE CUSTO"
+                }
+              },
+              "queryRef": "fact_Colaboradores.CENTRO DE CUSTO",
+              "nativeQueryRef": "CENTRO DE CUSTO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "COLABORADORES"
+                }
+              },
+              "queryRef": "fact_Colaboradores.COLABORADORES",
+              "nativeQueryRef": "COLABORADORES"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "CARGO"
+                }
+              },
+              "queryRef": "fact_Colaboradores.CARGO",
+              "nativeQueryRef": "CARGO"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "DIRETORIA"
+                }
+              },
+              "queryRef": "fact_Colaboradores.DIRETORIA",
+              "nativeQueryRef": "DIRETORIA"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "TIME"
+                }
+              },
+              "queryRef": "fact_Colaboradores.TIME",
+              "nativeQueryRef": "TIME"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "fact_Colaboradores"
+                    }
+                  },
+                  "Property": "SETOR-DEPARTAMENTO "
+                }
+              },
+              "queryRef": "fact_Colaboradores.SETOR-DEPARTAMENTO ",
+              "nativeQueryRef": "SETOR-DEPARTAMENTO "
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "fact_Colaboradores"
+                  }
+                },
+                "Property": "COLABORADORES"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "columnHeaders": [
+        {
+          "properties": {
+            "backColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#135B28'"
+                    }
+                  }
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'''Segoe UI'', wf_segoe-ui_normal, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "backColorSecondary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#C1DCB0'"
+                    }
+                  }
+                }
+              }
+            },
+            "backColorPrimary": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FFFFFF'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

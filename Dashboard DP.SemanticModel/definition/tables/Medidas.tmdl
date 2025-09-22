@@ -4,104 +4,17 @@ table Medidas
 	measure 'Qtd Funcionarios' = ```
 			
 			CALCULATE(
-			    COUNT(fact_Colaboradores[COLABORADORES]),
-			    TREATAS(VALUES(aux_Diretoria[MesAno]), fact_Colaboradores[MesAno]),
-			    TREATAS(VALUES(aux_Diretoria[DIRETORIA]), fact_Colaboradores[DIRETORIA]),
-			    TREATAS(VALUES(aux_Time[TIME]), fact_Colaboradores[TIME]),
-			    TREATAS(VALUES(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]), fact_Colaboradores[SETOR-DEPARTAMENTO ])
+			    DISTINCTCOUNT(fact_Colaboradores[COLABORADORES])
 			)
 			
 			```
 		formatString: 0
 		lineageTag: 720e92f7-45a4-425a-bccc-76a41c4312d9
 
-	measure 'Pct Colaboradores Diretoria' = ```
-			
-			VAR _Qtd = [Qtd Funcionarios]
-			VAR _Total =
-			    CALCULATE(
-			        COUNT(fact_Colaboradores[COLABORADORES]),
-			        ALL(fact_Colaboradores[DIRETORIA])
-			    )
-			RETURN
-			    IF(
-			        SELECTEDVALUE(aux_Diretoria[DIRETORIA]) = "TOTAL",
-			        1,                                   -- 100%
-			        DIVIDE(_Qtd, _Total)
-			    )
-			
-			```
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: facf9b43-632c-4d89-8e0a-2718fd7dd12f
-
-	measure 'Totalizador Diretoria' = ```
-			
-			VAR _Colaboradores = CALCULATE( [Qtd Funcionarios] )
-			VAR _Total =
-			IF(
-			    SELECTEDVALUE( aux_Diretoria[DIRETORIA] ) = "TOTAL",
-			    CALCULATE( 
-			        COUNT( fact_Colaboradores[COLABORADORES] ),
-			        ALL( fact_Colaboradores )
-			    )
-			)
-			RETURN
-			    _Colaboradores + _Total
-			```
-		formatString: 0
-		lineageTag: 5bf2c2f6-e313-4afc-8038-a5310d1c6ecb
-
-	measure 'Eixo Ordinal Diretoria' = ```
-			
-			SWITCH(
-			    TRUE(), 
-			    SELECTEDVALUE(aux_Diretoria[DIRETORIA]) IN VALUES( fact_Colaboradores[DIRETORIA] ),
-			    RANK(
-			        DENSE,
-			        ALL(aux_Diretoria[DIRETORIA]),
-			        ORDERBY([Qtd Funcionarios], ASC)
-			    ) +9
-			)
-			```
-		formatString: 0
-		lineageTag: cc3972e4-eac0-48ad-983e-19adc694b555
-
-	measure 'Totalizador Time' = ```
-			
-			VAR _Colaboradores = [Qtd Funcionarios]
-			VAR _Total =
-			IF(
-			    SELECTEDVALUE(aux_Time[TIME]) = "TOTAL",
-			    CALCULATE( 
-			        COUNT( fact_Colaboradores[COLABORADORES] ),
-			        ALL( fact_Colaboradores )
-			    )
-			)
-			RETURN
-			    _Colaboradores + _Total
-			```
-		formatString: 0
-		lineageTag: 7718a422-b129-44e8-a843-1c7057776a2c
-
-	measure 'Eixo Ordinal Time' = ```
-			
-			SWITCH(
-			    TRUE(), 
-			    SELECTEDVALUE(aux_Time[TIME]) IN VALUES( fact_Colaboradores[TIME] ),
-			    RANK(
-			        DENSE,
-			        ALL(aux_Time[TIME]),
-			        ORDERBY([Qtd Funcionarios], ASC)
-			    ) +9
-			)
-			```
-		formatString: 0
-		lineageTag: 77245709-4be0-4243-b315-87ade56707ac
-
 	measure 'Eixo Y Diretoria' = ```
 			
-			VAR _Tabela = ALLSELECTED( aux_Diretoria[DIRETORIA], aux_Diretoria[DIRETORIA] )
-			VAR _MaiorValor = MAXX( _Tabela, [Totalizador Diretoria] )
+			VAR _Tabela = ALLSELECTED( fact_Colaboradores[DIRETORIA], fact_Colaboradores[DIRETORIA] )
+			VAR _MaiorValor = MAXX( _Tabela, [Qtd Funcionarios] )
 			VAR _Deslocamento = 1.2
 			RETURN
 			
@@ -113,8 +26,8 @@ table Medidas
 
 	measure 'Eixo Y Time' = ```
 			
-			VAR _Tabela = ALLSELECTED( aux_Time[TIME], aux_Time[TIME] )
-			VAR _MaiorValor = MAXX( _Tabela, [Totalizador Time] )
+			VAR _Tabela = ALLSELECTED( fact_Colaboradores[TIME], fact_Colaboradores[TIME] )
+			VAR _MaiorValor = MAXX( _Tabela, [Qtd Funcionarios] )
 			VAR _Deslocamento = 1.2
 			RETURN
 			
@@ -124,25 +37,6 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Pct Colaboradores Time' = ```
-			
-			VAR _Qtd = [Qtd Funcionarios]
-			VAR _Total =
-			    CALCULATE(
-			        COUNT(fact_Colaboradores[COLABORADORES]),
-			        ALL(fact_Colaboradores[TIME])
-			    )
-			RETURN
-			    IF(
-			        SELECTEDVALUE(aux_Time[TIME]) = "TOTAL",
-			        1,                                   -- 100%
-			        DIVIDE(_Qtd, _Total)
-			    )
-			
-			```
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: c5b56528-9117-4b1a-92a4-baa8730f850b
-
 	measure 'Filtro Data Colaboradores' =
 			
 			IF (
@@ -150,7 +44,7 @@ table Medidas
 			        COUNTROWS ( fact_Colaboradores ),
 			        FILTER (
 			            fact_Colaboradores,
-			            fact_Colaboradores[MesAno] = STARTOFMONTH( dim_Calendario[Date] )
+			            fact_Colaboradores[MesAno] =  MAX( dim_Calendario[Date] )
 			        )
 			    ) > 0,
 			    1,
@@ -159,43 +53,11 @@ table Medidas
 		formatString: 0
 		lineageTag: 004f2b75-65c3-412c-a9f8-f65fd029889e
 
-	measure 'Totalizador SetorDepartamento' = ```
+	measure 'Eixo Y SetorDepartamento' = ```
 			
-			VAR _Colaboradores = [Qtd Funcionarios]
-			VAR _Total =
-			IF(
-			    SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) = "TOTAL",
-			    CALCULATE( 
-			        COUNT( fact_Colaboradores[COLABORADORES] ),
-			        ALL( fact_Colaboradores )
-			    )
-			)
-			RETURN
-			    _Colaboradores + _Total
-			```
-		formatString: 0
-		lineageTag: d478a79d-d25c-48f7-9983-4d2d575af4c1
-
-	measure 'Eixo Ordinal Setor' = ```
-			
-			SWITCH(
-			    TRUE(), 
-			    SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) IN VALUES( fact_Colaboradores[SETOR-DEPARTAMENTO ] ),
-			    RANK(
-			        DENSE,
-			        ALL(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]),
-			        ORDERBY([Qtd Funcionarios], ASC)
-			    ) +9
-			)
-			```
-		formatString: 0
-		lineageTag: 92479e36-2721-4a7b-a969-a3c23453f093
-
-	measure 'Eixo Y Setor' = ```
-			
-			VAR _Tabela = ALLSELECTED( aux_SetorDepartamento[MesAno], aux_SetorDepartamento[SETOR-DEPARTAMENTO ] )
-			VAR _MaiorValor = MAXX( _Tabela, [Totalizador SetorDepartamento] )
-			VAR _Deslocamento = 1.6
+			VAR _Tabela = ALLSELECTED( fact_Colaboradores[SETOR-DEPARTAMENTO ], fact_Colaboradores[SETOR-DEPARTAMENTO ] )
+			VAR _MaiorValor = MAXX( _Tabela, [Qtd Funcionarios] )
+			VAR _Deslocamento = 1.2
 			RETURN
 			
 			_MaiorValor * _Deslocamento 
@@ -203,25 +65,6 @@ table Medidas
 		lineageTag: 34bbe294-27d1-44bb-b478-9fa1372d8521
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Pct Colaboradores Setor' = ```
-			
-			VAR _Qtd = [Qtd Funcionarios]
-			VAR _Total =
-			    CALCULATE(
-			        COUNT(fact_Colaboradores[COLABORADORES]),
-			        ALL(fact_Colaboradores[SETOR-DEPARTAMENTO ])
-			    )
-			RETURN
-			    IF(
-			        SELECTEDVALUE(aux_SetorDepartamento[SETOR-DEPARTAMENTO ]) = "TOTAL",
-			        1,                                   -- 100%
-			        DIVIDE(_Qtd, _Total)
-			    )
-			
-			```
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: bc026dbd-1991-4511-b4e4-46362247752e
 
 	measure SaldoHoras =
 			
@@ -238,20 +81,37 @@ table Medidas
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure 'Grafico SaldoHoras' = ```
+	measure 'Titulo Dinamico Grafico HE' =
 			
-			VAR TotalMinutos = 
-			    CALCULATE( 
-			        SUM( fact_BancoHoras[Saldo Minutos] ),
-			        FILTER( 
-			            fact_BancoHoras, 
-			            fact_BancoHoras[Data Saldo] = 
-			            CALCULATE( 
-			                MAX(fact_BancoHoras[Data Saldo]),
-			                ALLEXCEPT( fact_BancoHoras, dim_Calendario[MesNome])
-			            )
-			        )
-			    )
+			VAR _SelecaoEixo = SELECTEDVALUE(aux_SlicerHE[NomeCampo])
+			VAR _SelecaoHoras = SELECTEDVALUE(aux_SlicerHoras[NomeCampo] )
+			VAR _Texto = "Distribuição de HE por "
+			VAR _TextoPela = " - Devidas Pela Empresa"
+			VAR _TextoPelo = " - Devidas Pelo Colaborador"
+			
+			RETURN
+			_Texto & IF( _SelecaoEixo = "Colaborador", "Colaborador", "Centro de Custo" ) & IF( _SelecaoHoras = "Colaborador", _TextoPelo, _TextoPela )
+		lineageTag: aba58217-0978-4a6a-9c20-9856a1f6e2a7
+
+	measure 'SaldoHoras Devido Colaborador' = ```
+			
+			VAR TotalMinutos = CALCULATE( SUM( fact_BancoHoras[Saldo Minutos] ), fact_BancoHoras[Saldo Minutos] < 0 ) 
+			VAR Horas = QUOTIENT( TotalMinutos, 60 )
+			VAR Minutos = TotalMinutos - ( Horas * 60 )
+			VAR Resultado =
+			    Horas * 100
+			    + ABS( Minutos ) * SIGN( TotalMinutos )
+			RETURN
+			ABS ( Resultado )
+			```
+		formatString: 00:00
+		lineageTag: 847cff21-4a9f-4063-914a-7f71b611c0ab
+
+		annotation PBI_FormatHint = {"isCustom":true}
+
+	measure 'SaldoHoras Devido Empresa' = ```
+			
+			VAR TotalMinutos = CALCULATE( SUM( fact_BancoHoras[Saldo Minutos] ), fact_BancoHoras[Saldo Minutos] > 0 ) 
 			VAR Horas = QUOTIENT( TotalMinutos, 60 )
 			VAR Minutos = TotalMinutos - ( Horas * 60 )
 			VAR Resultado =
@@ -261,27 +121,35 @@ table Medidas
 			Resultado
 			```
 		formatString: 00:00
-		lineageTag: e615ab18-eed2-414b-88b0-71cf2795a411
+		lineageTag: 149acdf3-d2af-4458-a534-fbcdf60d980b
 
 		annotation PBI_FormatHint = {"isCustom":true}
 
-	measure Teste = ```
+	measure 'Eixo Y Saldo Horas' = ```
 			
-			CALCULATE( 
-			    SUM( fact_BancoHoras[Saldo Minutos] ),
-			    fact_BancoHoras[Data Saldo] = MAX( dim_Calendario[Date] ) 
-			)
-			```
-		formatString: 0
-		lineageTag: 808030bf-5399-4e2f-a57b-1465f71d8532
-
-	measure 'Titulo Dinamico Grafico HE' =
-			
-			VAR _SelecaoEixo = SELECTEDVALUE(aux_SlicerHE[NomeCampo])
-			VAR _Texto = "Distribuição de HE por "
+			VAR _Tabela = ALLSELECTED( fact_BancoHoras[Data Saldo], fact_BancoHoras[Data Saldo] )
+			VAR _MaiorValor = MAXX( _Tabela, [SaldoHoras] )
+			VAR _Deslocamento = 1.2
 			RETURN
-			_Texto & _SelecaoEixo
-		lineageTag: aba58217-0978-4a6a-9c20-9856a1f6e2a7
+			_MaiorValor * _Deslocamento 
+			```
+		lineageTag: 0b6770f8-224d-4923-a090-9e489b7547c2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cor Condicional Horas Devidas' = ```
+			
+			VAR _SelecaoParametro = SELECTEDVALUE( aux_SlicerHoras[Parameter Order] )
+			VAR _Switch = 
+			SWITCH(
+			    TRUE(), 
+			    _SelecaoParametro = 0, "#FF0000",
+			    _SelecaoParametro = 1, "#007A0A"
+			)
+			RETURN
+			_Switch
+			```
+		lineageTag: 57458c12-046a-4793-b477-e9645ac1a7dd
 
 	column Column
 		isHidden

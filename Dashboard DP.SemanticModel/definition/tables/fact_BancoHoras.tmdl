@@ -41,6 +41,14 @@ table fact_BancoHoras
 
 		annotation SummarizationSetBy = Automatic
 
+	column Colaborador
+		dataType: string
+		lineageTag: 5b18b015-a597-4315-928c-8d4853e59734
+		summarizeBy: none
+		sourceColumn: Colaborador
+
+		annotation SummarizationSetBy = Automatic
+
 	partition fact_BancoHoras = m
 		mode: import
 		source = ```
@@ -57,7 +65,7 @@ table fact_BancoHoras
 				        ( arquivo as binary ) as table =>
 				        let
 				            // Carregar arquivo excel e promover cabecalhos
-				            excel = Excel.Workbook( arquivo, true ){0}[Data],
+				            excel = Table.PromoteHeaders( Excel.Workbook( arquivo, true ){0}[Data], [PromoteAllScalars=true] ),
 				            
 				            // Define a coluna de Data como date
 				            DefinirTipagem = Table.TransformColumnTypes( excel, {"Data Saldo", type date } ),
@@ -104,6 +112,7 @@ table fact_BancoHoras
 				            ),
 				            
 				            ColunasNecessarias = { 
+				                "Colaborador", // Facilitar identificação para correções de bugs
 				                "CPF", // Relacionar com a dim_Colaboradores
 				                "Data Saldo", // Mensurar periodo e relacionar com a dim_Calendario
 				                "Saldo Minutos", // Informação convertida para minutos

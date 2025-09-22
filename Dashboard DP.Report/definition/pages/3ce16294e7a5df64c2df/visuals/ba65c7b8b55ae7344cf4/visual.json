@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ba65c7b8b55ae7344cf4",
   "position": {
-    "x": 526.04878048780483,
-    "y": 235.70731707317074,
+    "x": 435.40157480314957,
+    "y": 240.37795275590551,
     "z": 9000,
-    "height": 295.02439024390242,
-    "width": 1134.8292682926829,
-    "tabOrder": 11000
+    "height": 359.81102362204723,
+    "width": 1437.7322834645668,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -23,11 +23,11 @@
                       "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "MesNome"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "dim_Calendario.MesNome",
-              "nativeQueryRef": "MesNome",
+              "queryRef": "dim_Calendario.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
@@ -42,14 +42,48 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Grafico SaldoHoras"
+                  "Property": "SaldoHoras Devido Empresa"
                 }
               },
-              "queryRef": "Medidas.Grafico SaldoHoras",
-              "nativeQueryRef": "Grafico SaldoHoras"
+              "queryRef": "Medidas.SaldoHoras Devido Empresa",
+              "nativeQueryRef": "HORAS DEVIDAS PELA EMPRESA",
+              "displayName": "HORAS DEVIDAS PELA EMPRESA"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "SaldoHoras Devido Colaborador"
+                }
+              },
+              "queryRef": "Medidas.SaldoHoras Devido Colaborador",
+              "nativeQueryRef": "HORAS DEVIDAS PELO COLABORADOR",
+              "displayName": "HORAS DEVIDAS PELO COLABORADOR"
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_Calendario"
+                  }
+                },
+                "Property": "Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -132,6 +166,91 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#007A0A'"
+                    }
+                  }
+                }
+              }
+            },
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.SaldoHoras Devido Colaborador"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FF0000'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Medidas.SaldoHoras Devido Empresa"
+          }
+        },
+        {
+          "properties": {
+            "borderShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "borderColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "borderColorMatchFill": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "labels": [
@@ -173,18 +292,25 @@
             "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "'wf_standard-font, helvetica, arial, sans-serif'"
+                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
                 }
               }
             },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "19D"
                 }
               }
             },
             "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableValueDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -247,7 +373,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -284,6 +410,18 @@
                   "Value": "false"
                 }
               }
+            },
+            "end": {
+              "expr": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Eixo Y Saldo Horas"
+                }
+              }
             }
           }
         }
@@ -292,6 +430,59 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "position": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
+                }
+              }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SALDO DE HORAS'"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "13D"
+                }
+              }
+            },
+            "showTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -316,7 +507,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'EVOLUÇÃO HE POR MÊS'"
+                  "Value": "'Evolução Horas Extras por Mês'"
                 }
               }
             },
@@ -378,5 +569,58 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "1725e0c16dfbc6e28a34",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "fact_BancoHoras"
+              }
+            },
+            "Property": "Saldo Minutos"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "f",
+              "Entity": "fact_BancoHoras",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 1,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "f"
+                        }
+                      },
+                      "Property": "Saldo Minutos"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "0L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      }
+    ]
   }
 }

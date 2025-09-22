@@ -8,8 +8,6 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
-
 annotation PBI_QueryOrder = ["PastaLocal","dim_Lojas","fact_Colaboradores","fact_BancoHoras"]
 
 annotation PBI_ProTooling = ["DevMode"]
@@ -18,11 +16,9 @@ ref table fact_Colaboradores
 ref table dim_Calendario
 ref table Medidas
 ref table dim_Lojas
-ref table aux_Diretoria
-ref table aux_Time
 ref table fact_BancoHoras
-ref table aux_SetorDepartamento
 ref table aux_SlicerHE
+ref table aux_SlicerHoras
 
 ref cultureInfo pt-BR
 

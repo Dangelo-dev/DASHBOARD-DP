@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "88277b5d7ee1208628c4",
-  "displayName": "Quadro",
+  "displayName": "Colab. por UN",
   "displayOption": "FitToPage",
   "height": 1080,
   "width": 1920,
@@ -27,7 +27,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'02. Rel. de Colaboradores.png'"
+                    "Value": "'02. Quadro de Pessoal.png'"
                   }
                 }
               },
@@ -36,7 +36,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "02._Rel._de_Colaboradores5107522820366757.png"
+                    "ItemName": "02._Quadro_de_Pessoal11901176243421563.png"
                   }
                 }
               },
@@ -64,26 +64,6 @@
   "visualInteractions": [
     {
       "source": "f0dba49d9e85c4c7b3ea",
-      "target": "42dabfede36d25f3f538",
-      "type": "DataFilter"
-    },
-    {
-      "source": "f0dba49d9e85c4c7b3ea",
-      "target": "dcfb8ef8bbcad074f6da",
-      "type": "DataFilter"
-    },
-    {
-      "source": "42dabfede36d25f3f538",
-      "target": "f0dba49d9e85c4c7b3ea",
-      "type": "DataFilter"
-    },
-    {
-      "source": "42dabfede36d25f3f538",
-      "target": "dcfb8ef8bbcad074f6da",
-      "type": "DataFilter"
-    },
-    {
-      "source": "f0dba49d9e85c4c7b3ea",
       "target": "e9cead9742d8f3f25352",
       "type": "DataFilter"
     },
@@ -91,6 +71,11 @@
       "source": "f0dba49d9e85c4c7b3ea",
       "target": "209325b3fbef102a2ab9",
       "type": "DataFilter"
+    },
+    {
+      "source": "ea260b4684e66970606d",
+      "target": "f967c55c0203340c1401",
+      "type": "NoFilter"
     }
   ]
 }

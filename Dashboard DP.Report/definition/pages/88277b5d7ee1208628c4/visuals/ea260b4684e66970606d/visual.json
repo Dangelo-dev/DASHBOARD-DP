@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ea260b4684e66970606d",
   "position": {
-    "x": 358.57142857142861,
-    "y": 138.57142857142858,
+    "x": 358.75,
+    "y": 135.625,
     "z": 0,
-    "height": 61.428571428571431,
+    "height": 51.25,
     "width": 140,
-    "tabOrder": 10000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "fact_Colaboradores"
+                      "Entity": "dim_Lojas"
                     }
                   },
                   "Property": "UNIDADE"
                 }
               },
-              "queryRef": "Lista de Colaboradores UDI.UNIDADE",
-              "nativeQueryRef": "UNIDADE",
+              "queryRef": "dim_Lojas.UNIDADE",
+              "nativeQueryRef": "UNIDADE1",
               "active": true
             }
           ]
@@ -120,6 +120,11 @@
           }
         }
       ]
+    },
+    "syncGroup": {
+      "groupName": "UNIDADE",
+      "fieldChanges": true,
+      "filterChanges": true
     },
     "drillFilterOtherVisuals": true
   }

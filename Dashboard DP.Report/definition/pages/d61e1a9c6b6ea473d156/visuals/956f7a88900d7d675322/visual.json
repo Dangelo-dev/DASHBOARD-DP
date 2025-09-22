@@ -1,12 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "956f7a88900d7d675322",
   "position": {
     "x": 630.63414634146341,
     "y": 28.097560975609756,
     "z": 1000,
     "height": 59.31707317073171,
-    "width": 171.70731707317074
+    "width": 171.70731707317074,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "slicer",
@@ -22,15 +23,33 @@
                       "Entity": "dim_Calendario"
                     }
                   },
-                  "Property": "MesAno"
+                  "Property": "Date"
                 }
               },
-              "queryRef": "dim_Calendario.MesAno",
-              "nativeQueryRef": "MesAno",
+              "queryRef": "dim_Calendario.Date",
+              "nativeQueryRef": "Date",
               "active": true
             }
           ]
         }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "dim_Calendario"
+                  }
+                },
+                "Property": "Date"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -85,7 +104,7 @@
                                   "Source": "d"
                                 }
                               },
-                              "Property": "MesAno"
+                              "Property": "Date"
                             }
                           }
                         ],
@@ -93,7 +112,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "'set/2025'"
+                                "Value": "datetime'2025-09-15T00:00:00'"
                               }
                             }
                           ]
@@ -186,12 +205,34 @@
         }
       ]
     },
+    "syncGroup": {
+      "groupName": "Date",
+      "fieldChanges": true,
+      "filterChanges": true
+    },
     "drillFilterOtherVisuals": true
   },
   "filterConfig": {
     "filters": [
       {
-        "name": "f1a4436b0d6d85516939",
+        "name": "38eda244f54a0f15a368",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "dim_Calendario"
+              }
+            },
+            "Property": "MesAno"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "467625cc8c1d58205249",
+        "ordinal": 1,
         "field": {
           "Measure": {
             "Expression": {
